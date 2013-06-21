@@ -1,4 +1,4 @@
-# [Conferência de Empregabilidade - 2013](http://conferenciavidaativa.letpi.com/)
+﻿# [Conferência de Empregabilidade - 2013](http://conferenciavidaativa.letpi.com/)
 
 ##Ciências informáticas - Formação de Ativos
 Trabalho final do curso de formação profissional de [Programador JAVA](http://www.citeforma.pt/docs/cursosDetalhePrint.asp?idCurso=6116)
@@ -37,7 +37,7 @@ Entenda-se por todo o material não produzido pelos formandos de Java:
 3. Vídeos 
 4. Formulários 
 5. Cronogramas
-6. ...e sabe-se lá mais o quê.
+6. ...e sabe-se lá mais o quê
 
 ##### As Caixas de Texto
 
@@ -46,7 +46,7 @@ Os documentos "google" permitem atualizar (quase em tempo real) os conteúdos de
 ##### O Formulário
 
 O formulário "google" permite simular a inscrição na conferência, e os seus resultados podem ser consultados numa tabela
-que é gerada automáticamente pelo formulário.
+que é gerada automaticamente pelo formulário.
 
 ##### O Horário/Cronograma
 
