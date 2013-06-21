@@ -2,7 +2,7 @@
  * @author Paulo Godinho
  *
  *
- ==============ANIM-Administrativos=================================================
+ ==============ANIM-Administrativos - Texto=================================================
  <!--NodeFire Stage Widget
  Copyright NodeFire - All Rights Reserved.
  http://www.nodefire.com -->
@@ -1460,8 +1460,8 @@ _NF.prototype.stageData = function(k) {
 	}
 };
 
-NodeFire_1762239974 = {
-	nfUid : 'NodeFire_1762239974',
+NodeFire_1777975785 = {
+	nfUid : 'NodeFire_1777975785',
 	data : {
 		data : {
 			elmId : "Linhas",
@@ -1469,10 +1469,10 @@ NodeFire_1762239974 = {
 			elmOrder : {
 				_0764239314 : {
 					id : "Botao_Voltar",
-					pUid : "_1762239974",
+					pUid : "_1777975785",
 					c : 1,
 					link : {
-						link : "workInProgress.html"
+						link : "administrativos.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1485,100 +1485,38 @@ NodeFire_1762239974 = {
 				},
 				_0767707637 : {
 					id : "Titulo",
-					pUid : "_1762239974",
+					pUid : "_1777975785",
 					c : 1,
 					con : "<h1>Vida Ativa 2013</h1><h3>Work in Progress</h3>"
 				},
 				_0792066054 : {
 					id : "Linha_Horizontal_1",
-					pUid : "_1762239974",
+					pUid : "_1777975785",
 					c : 1
 				},
 				_0792551309 : {
 					id : "Curva_1",
-					pUid : "_1762239974",
+					pUid : "_1777975785",
 					c : 1
 				},
 				_0793005751 : {
 					id : "Linha_Vertical_1",
-					pUid : "_1762239974",
+					pUid : "_1777975785",
 					c : 1
 				},
 				_0793788573 : {
 					id : "Curva_2",
-					pUid : "_1762239974",
+					pUid : "_1777975785",
 					c : 1
 				},
 				_0794227652 : {
 					id : "Linha_Horizontal_2",
-					pUid : "_1762239974",
+					pUid : "_1777975785",
 					c : 1
-				},
-				_1567531313 : {
-					id : "Curva_3",
-					pUid : "_1762239974",
-					c : 1
-				},
-				_1567807616 : {
-					id : "Linha_Vertical_2",
-					pUid : "_1762239974",
-					c : 1
-				},
-				_1568250645 : {
-					id : "Curva_4",
-					pUid : "_1762239974",
-					c : 1
-				},
-				_1568989393 : {
-					id : "Linha_Horizontal_3",
-					pUid : "_1762239974",
-					c : 1
-				},
-				_1568790509 : {
-					id : "Botao_Administrativos",
-					pUid : "_1762239974",
-					c : 1,
-					link : {
-						link : "administrativos.html"
-					},
-					cn : {
-						nf_button : 1,
-						red_button : 1,
-						red_button_hoverMenu : 1,
-						red_button_clickMenu : 1,
-						red_button_class_name : 1
-					},
-					con : "<h3>Administrativos</h3>"
-				},
-				_1569586201 : {
-					id : "Curva_5",
-					pUid : "_1762239974",
-					c : 1
-				},
-				_1570223546 : {
-					id : "Linha_Vertical_3",
-					pUid : "_1762239974",
-					c : 1
-				},
-				_1570564752 : {
-					id : "Curva_6",
-					pUid : "_1762239974",
-					c : 1
-				},
-				_1570829149 : {
-					id : "Linha_Horizontal_4",
-					pUid : "_1762239974",
-					c : 1
-				},
-				_1575278746 : {
-					id : "Texto",
-					pUid : "_1762239974",
-					c : 1,
-					con : "<iframe src=\"https://docs.google.com/document/d/1pvuCjtt5L9pJAKRui96kgUu09jn-i6latYw4Ni8BjUA/pub?embedded=true\" frameborder=\"0\" height=\"290\" scrolling=\"yes\" width=\"550\"></iframe>"
 				},
 				_1384131310 : {
 					id : "Menu_de_rodape",
-					pUid : "_1762239974",
+					pUid : "_1777975785",
 					c : 1,
 					cn : {
 						nf_hoverMenu : 1,
@@ -1765,12 +1703,18 @@ NodeFire_1762239974 = {
 					},
 					con : "Vídeos"
 				},
-				_1697034633 : {
-					id : "Botao_MaisInfo",
-					pUid : "_1762239974",
+				_1766223093 : {
+					id : "Texto",
+					pUid : "_1777975785",
+					c : 1,
+					con : "<iframe src=\"http://www.citeforma.pt/docs/cursosDetalhePrint.asp?idCurso=6105?embedded=true\" frameborder=\"0\" height=\"400\" scrolling=\"yes\" width=\"720\"></iframe>"
+				},
+				_1777802295 : {
+					id : "Botao_Administrativos",
+					pUid : "_1777975785",
 					c : 1,
 					link : {
-						link : "administrativosVideo.html"
+						link : "administrativos.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1779,21 +1723,16 @@ NodeFire_1762239974 = {
 						red_button_clickMenu : 1,
 						red_button_class_name : 1
 					},
-					con : "<h3>Mais informação</h3>"
-				},
-				_1698582817 : {
-					id : "Foto",
-					pUid : "_1762239974",
-					c : 1
+					con : "<h3>Administrativos</h3>"
 				}
 			}
 		},
 		ready : {
-			_1762239974 : {
+			_1777975785 : {
 				d : {
 					o : {}
 				},
-				_1762239974 : {
+				_1777975785 : {
 					top : {
 						def : {
 							v : 0
@@ -2492,7 +2431,7 @@ NodeFire_1762239974 = {
 							v : 0
 						},
 						_90 : {
-							v : 780
+							v : 832
 						}
 					},
 					height : {
@@ -2721,7 +2660,7 @@ NodeFire_1762239974 = {
 						_0 : {
 							v : 0
 						},
-						_230 : {
+						_90 : {
 							v : 1
 						}
 					}
@@ -4384,1653 +4323,25 @@ NodeFire_1762239974 = {
 						}
 					}
 				},
-				_1567531313 : {
+				_1766223093 : {
 					width : {
 						def : {
-							v : 0
-						},
-						_90 : {
-							v : 0
-						},
-						_100 : {
-							v : 25
+							v : 820
 						}
 					},
 					height : {
 						def : {
-							v : 25
-						},
-						_90 : {
-							v : 25
-						},
-						_100 : {
-							v : 25
-						}
-					},
-					top : {
-						def : {
-							v : 586
-						},
-						_90 : {
-							v : 585
-						},
-						_100 : {
-							v : 585
-						}
-					},
-					left : {
-						def : {
-							v : 976
-						},
-						_90 : {
-							v : 976
-						},
-						_100 : {
-							v : 976
-						}
-					},
-					backgroundColor : {
-						def : {
-							v : "rgba(255,0,0,1)"
-						},
-						_90 : {
-							v : "rgba(255,0,0,1)"
-						},
-						_100 : {
-							v : "rgba(255,0,0,1)"
-						}
-					},
-					backgroundColor_Red : {
-						def : {
-							v : 255
-						},
-						_90 : {
-							v : 255
-						},
-						_100 : {
-							v : 255
-						}
-					},
-					backgroundColor_Green : {
-						def : {
-							v : 0
-						},
-						_90 : {
-							v : 0
-						},
-						_100 : {
-							v : 0
-						}
-					},
-					backgroundColor_Blue : {
-						def : {
-							v : 0
-						},
-						_90 : {
-							v : 0
-						},
-						_100 : {
-							v : 0
-						}
-					},
-					backgroundColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_90 : {
-							v : 1
-						},
-						_100 : {
-							v : 1
-						}
-					},
-					borderWidth : {
-						def : {
-							v : 2
-						},
-						_90 : {
-							v : 2
-						},
-						_100 : {
-							v : 2
-						}
-					},
-					borderColor : {
-						def : {
-							v : "rgba(255,255,255,1)"
-						},
-						_100 : {
-							v : "rgba(255,255,255,1)"
-						}
-					},
-					borderColor_Red : {
-						def : {
-							v : 255
-						},
-						_100 : {
-							v : 255
-						}
-					},
-					borderColor_Green : {
-						def : {
-							v : 255
-						},
-						_100 : {
-							v : 255
-						}
-					},
-					borderColor_Blue : {
-						def : {
-							v : 255
-						},
-						_100 : {
-							v : 255
-						}
-					},
-					borderColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_100 : {
-							v : 1
-						}
-					},
-					borderRadius_BottomRight : {
-						def : {
-							v : 90
-						},
-						_90 : {
-							v : 90
-						}
-					}
-				},
-				_1567807616 : {
-					width : {
-						def : {
-							v : 25
-						},
-						_120 : {
-							v : 25
-						},
-						_101 : {
-							v : 25
-						}
-					},
-					height : {
-						def : {
-							v : 0
-						},
-						_120 : {
-							v : 400
-						},
-						_101 : {
-							v : 0
-						}
-					},
-					top : {
-						def : {
-							v : 579
-						},
-						_100 : {
-							v : 578
-						},
-						_120 : {
-							v : 180
-						},
-						_101 : {
-							v : 575.1
-						}
-					},
-					left : {
-						def : {
-							v : 976
-						},
-						_100 : {
-							v : 976
-						},
-						_120 : {
-							v : 976
-						},
-						_101 : {
-							v : 976
-						}
-					},
-					backgroundColor : {
-						def : {
-							v : "rgba(255,0,0,1)"
-						},
-						_100 : {
-							v : "rgba(255,0,0,1)"
-						},
-						_120 : {
-							v : "rgba(255,0,0,1)"
-						}
-					},
-					backgroundColor_Red : {
-						def : {
-							v : 255
-						},
-						_100 : {
-							v : 255
-						},
-						_120 : {
-							v : 255
-						}
-					},
-					backgroundColor_Green : {
-						def : {
-							v : 0
-						},
-						_100 : {
-							v : 0
-						},
-						_120 : {
-							v : 0
-						}
-					},
-					backgroundColor_Blue : {
-						def : {
-							v : 0
-						},
-						_100 : {
-							v : 0
-						},
-						_120 : {
-							v : 0
-						}
-					},
-					backgroundColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_100 : {
-							v : 1
-						},
-						_120 : {
-							v : 1
-						}
-					},
-					borderWidth : {
-						def : {
-							v : 2
-						},
-						_100 : {
-							v : 2
-						},
-						_120 : {
-							v : 2
-						}
-					},
-					borderColor : {
-						def : {
-							v : "rgba(255,255,255,1)"
-						},
-						_100 : {
-							v : "rgba(255,255,255,1)"
-						},
-						_120 : {
-							v : "rgba(255,255,255,1)"
-						}
-					},
-					borderColor_Red : {
-						def : {
-							v : 255
-						},
-						_100 : {
-							v : 255
-						},
-						_120 : {
-							v : 255
-						}
-					},
-					borderColor_Green : {
-						def : {
-							v : 255
-						},
-						_100 : {
-							v : 255
-						},
-						_120 : {
-							v : 255
-						}
-					},
-					borderColor_Blue : {
-						def : {
-							v : 255
-						},
-						_100 : {
-							v : 255
-						},
-						_120 : {
-							v : 255
-						}
-					},
-					borderColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_100 : {
-							v : 1
-						},
-						_120 : {
-							v : 1
-						}
-					}
-				},
-				_1568250645 : {
-					width : {
-						def : {
-							v : 25
-						},
-						_130 : {
-							v : 25
-						},
-						_120 : {
-							v : 25
-						}
-					},
-					height : {
-						def : {
-							v : 0
-						},
-						_130 : {
-							v : 25
-						}
-					},
-					top : {
-						def : {
-							v : 172
-						},
-						_130 : {
-							v : 150
-						},
-						_120 : {
-							v : 172
-						}
-					},
-					left : {
-						def : {
-							v : 976
-						},
-						_120 : {
-							v : 976
-						}
-					},
-					borderWidth : {
-						def : {
-							v : 2
-						},
-						_130 : {
-							v : 2
-						},
-						_120 : {
-							v : 2
-						}
-					},
-					borderColor : {
-						def : {
-							v : "rgba(255,255,255,1)"
-						},
-						_120 : {
-							v : "rgba(255,255,255,1)"
-						}
-					},
-					borderColor_Red : {
-						def : {
-							v : 255
-						},
-						_120 : {
-							v : 255
-						}
-					},
-					borderColor_Green : {
-						def : {
-							v : 255
-						},
-						_120 : {
-							v : 255
-						}
-					},
-					borderColor_Blue : {
-						def : {
-							v : 255
-						},
-						_120 : {
-							v : 255
-						}
-					},
-					borderColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_120 : {
-							v : 1
-						}
-					},
-					backgroundColor : {
-						def : {
-							v : "rgba(255,0,0,1)"
-						},
-						_130 : {
-							v : "rgba(255,0,0,1)"
-						},
-						_120 : {
-							v : "rgba(255,0,0,1)"
-						}
-					},
-					backgroundColor_Red : {
-						def : {
-							v : 255
-						},
-						_130 : {
-							v : 255
-						},
-						_120 : {
-							v : 255
-						}
-					},
-					backgroundColor_Green : {
-						def : {
-							v : 0
-						},
-						_130 : {
-							v : 0
-						},
-						_120 : {
-							v : 0
-						}
-					},
-					backgroundColor_Blue : {
-						def : {
-							v : 0
-						},
-						_130 : {
-							v : 0
-						},
-						_120 : {
-							v : 0
-						}
-					},
-					backgroundColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_130 : {
-							v : 1
-						},
-						_120 : {
-							v : 1
-						}
-					},
-					borderRadius_TopRight : {
-						def : {
-							v : 90
-						},
-						_130 : {
-							v : 90
-						}
-					},
-					borderRadius_BottomRight : {
-						_120 : {
-							v : null
-						}
-					}
-				},
-				_1568790509 : {
-					width : {
-						def : {
-							v : 125
-						},
-						_149 : {
-							v : 125
-						},
-						_210 : {
-							v : 125
-						}
-					},
-					height : {
-						def : {
-							v : 25
-						},
-						_149 : {
-							v : 25
-						},
-						_210 : {
-							v : 25
-						}
-					},
-					top : {
-						def : {
-							v : 110
-						},
-						_149 : {
-							v : 110
-						},
-						_210 : {
-							v : 110
-						}
-					},
-					left : {
-						def : {
-							v : 428
-						},
-						_149 : {
-							v : 428
-						},
-						_210 : {
-							v : 428
-						}
-					},
-					backgroundColor : {
-						def : {
-							v : "rgba(0,0,0,1)"
-						},
-						_149 : {
-							v : "rgba(0,0,0,1)"
-						},
-						_210 : {
-							v : "rgba(0,0,0,1)"
-						}
-					},
-					backgroundColor_Red : {
-						def : {
-							v : 0
-						},
-						_149 : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						}
-					},
-					backgroundColor_Green : {
-						def : {
-							v : 0
-						},
-						_149 : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						}
-					},
-					backgroundColor_Blue : {
-						def : {
-							v : 0
-						},
-						_149 : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						}
-					},
-					backgroundColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_149 : {
-							v : 1
-						},
-						_210 : {
-							v : 1
-						}
-					},
-					textAlign : {
-						def : {
-							v : "Center"
-						}
-					},
-					fontFamily : {
-						def : {
-							v : "Helvetica"
-						}
-					},
-					color : {
-						def : {
-							v : "rgba(255,255,255,1)"
-						}
-					},
-					color_Red : {
-						def : {
-							v : 255
-						}
-					},
-					color_Green : {
-						def : {
-							v : 255
-						}
-					},
-					color_Blue : {
-						def : {
-							v : 255
-						}
-					},
-					color_Alpha : {
-						def : {
-							v : 1
-						}
-					},
-					borderRadius : {
-						def : {
-							v : 15
-						}
-					},
-					cursor : {
-						def : {
-							v : "pointer"
-						}
-					},
-					borderStyle : {
-						def : {
-							v : "solid"
-						}
-					},
-					borderColor : {
-						def : {
-							v : "rgba(0,0,0,1)"
-						},
-						_149 : {
-							v : "rgba(0,0,0,1)"
-						},
-						_210 : {
-							v : "rgba(0,0,0,1)"
-						}
-					},
-					borderColor_Red : {
-						def : {
-							v : 0
-						},
-						_149 : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						}
-					},
-					borderColor_Green : {
-						def : {
-							v : 0
-						},
-						_149 : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						}
-					},
-					borderColor_Blue : {
-						def : {
-							v : 0
-						},
-						_149 : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						}
-					},
-					borderColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_149 : {
-							v : 1
-						},
-						_210 : {
-							v : 1
-						}
-					},
-					lineHeight : {
-						def : {
-							v : 0
-						}
-					},
-					opacity : {
-						def : {
-							v : 0
-						},
-						_149 : {
-							v : 0
-						},
-						_210 : {
-							v : 1
-						}
-					},
-					backgroundImage : {
-						def : {
-							v : "http://"
-						}
-					},
-					right : {
-						def : {
-							v : 0
-						}
-					},
-					borderWidth : {
-						_149 : {
-							v : null
-						},
-						_210 : {
-							v : null
-						}
-					}
-				},
-				_1568989393 : {
-					width : {
-						def : {
-							v : 0
-						},
-						_131 : {
-							v : 0
-						},
-						_150 : {
-							v : 543
-						}
-					},
-					height : {
-						def : {
-							v : 25
-						},
-						_131 : {
-							v : 25
-						},
-						_150 : {
-							v : 25
-						}
-					},
-					top : {
-						def : {
-							v : 150
-						},
-						_131 : {
-							v : 150
-						},
-						_150 : {
-							v : 150
-						}
-					},
-					left : {
-						def : {
-							v : 428
-						},
-						_131 : {
-							v : 968
-						},
-						_150 : {
-							v : 428
-						}
-					},
-					backgroundColor : {
-						def : {
-							v : "rgba(255,0,0,1)"
-						},
-						_131 : {
-							v : "rgba(255,0,0,1)"
-						},
-						_150 : {
-							v : "rgba(255,0,0,1)"
-						}
-					},
-					backgroundColor_Red : {
-						def : {
-							v : 255
-						},
-						_210 : {
-							v : 255
-						},
-						_230 : {
-							v : 255
-						}
-					},
-					backgroundColor_Green : {
-						def : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						},
-						_230 : {
-							v : 0
-						}
-					},
-					backgroundColor_Blue : {
-						def : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						},
-						_230 : {
-							v : 0
-						}
-					},
-					backgroundColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_210 : {
-							v : 1
-						},
-						_230 : {
-							v : 1
-						}
-					},
-					borderWidth : {
-						def : {
-							v : 2
-						},
-						_131 : {
-							v : 2
-						},
-						_150 : {
-							v : 2
-						}
-					},
-					borderColor : {
-						def : {
-							v : "rgba(255,255,255,1)"
-						},
-						_131 : {
-							v : "rgba(255,255,255,1)"
-						},
-						_150 : {
-							v : "rgba(255,255,255,1)"
-						}
-					},
-					borderColor_Red : {
-						def : {
-							v : 255
-						},
-						_210 : {
-							v : 255
-						},
-						_230 : {
-							v : 255
-						}
-					},
-					borderColor_Green : {
-						def : {
-							v : 255
-						},
-						_210 : {
-							v : 255
-						},
-						_230 : {
-							v : 255
-						}
-					},
-					borderColor_Blue : {
-						def : {
-							v : 255
-						},
-						_210 : {
-							v : 255
-						},
-						_230 : {
-							v : 255
-						}
-					},
-					borderColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_210 : {
-							v : 1
-						},
-						_230 : {
-							v : 1
-						}
-					}
-				},
-				_1569586201 : {
-					width : {
-						def : {
-							v : 0
-						},
-						_150 : {
-							v : 0
-						},
-						_160 : {
-							v : 25
-						},
-						_149 : {
-							v : 0
-						}
-					},
-					height : {
-						def : {
-							v : 25
-						},
-						_150 : {
-							v : 25
-						},
-						_160 : {
-							v : 25
-						},
-						_149 : {
-							v : 25
-						}
-					},
-					top : {
-						def : {
-							v : 150
-						},
-						_150 : {
-							v : 150
-						},
-						_160 : {
-							v : 150
-						}
-					},
-					left : {
-						def : {
-							v : 449
-						},
-						_160 : {
-							v : 400
-						},
-						_149 : {
-							v : 449
-						}
-					},
-					backgroundColor : {
-						def : {
-							v : "rgba(255,0,0,1)"
-						},
-						_150 : {
-							v : "rgba(255,0,0,1)"
-						},
-						_160 : {
-							v : "rgba(255,0,0,1)"
-						},
-						_149 : {
-							v : "rgba(255,0,0,1)"
-						}
-					},
-					backgroundColor_Red : {
-						def : {
-							v : 255
-						},
-						_150 : {
-							v : 255
-						},
-						_160 : {
-							v : 255
-						},
-						_149 : {
-							v : 255
-						}
-					},
-					backgroundColor_Green : {
-						def : {
-							v : 0
-						},
-						_150 : {
-							v : 0
-						},
-						_160 : {
-							v : 0
-						},
-						_149 : {
-							v : 0
-						}
-					},
-					backgroundColor_Blue : {
-						def : {
-							v : 0
-						},
-						_150 : {
-							v : 0
-						},
-						_160 : {
-							v : 0
-						},
-						_149 : {
-							v : 0
-						}
-					},
-					backgroundColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_150 : {
-							v : 1
-						},
-						_160 : {
-							v : 1
-						},
-						_149 : {
-							v : 1
-						}
-					},
-					borderWidth : {
-						def : {
-							v : 2
-						},
-						_150 : {
-							v : 2
-						},
-						_160 : {
-							v : 2
-						}
-					},
-					borderColor : {
-						def : {
-							v : "rgba(255,255,255,1)"
-						},
-						_160 : {
-							v : "rgba(255,255,255,1)"
-						},
-						_149 : {
-							v : "rgba(255,255,255,1)"
-						}
-					},
-					borderColor_Red : {
-						def : {
-							v : 255
-						},
-						_160 : {
-							v : 255
-						},
-						_149 : {
-							v : 255
-						}
-					},
-					borderColor_Green : {
-						def : {
-							v : 255
-						},
-						_160 : {
-							v : 255
-						},
-						_149 : {
-							v : 255
-						}
-					},
-					borderColor_Blue : {
-						def : {
-							v : 255
-						},
-						_160 : {
-							v : 255
-						},
-						_149 : {
-							v : 255
-						}
-					},
-					borderColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_160 : {
-							v : 1
-						},
-						_149 : {
-							v : 1
-						}
-					},
-					borderRadius_TopLeft : {
-						def : {
-							v : 90
-						},
-						_150 : {
-							v : 90
-						},
-						_160 : {
-							v : 90
-						}
-					}
-				},
-				_1570223546 : {
-					width : {
-						def : {
-							v : 25
-						},
-						_160 : {
-							v : 25
-						},
-						_180 : {
-							v : 25
-						}
-					},
-					height : {
-						def : {
-							v : 0
-						},
-						_160 : {
-							v : 0
-						},
-						_180 : {
-							v : 285
-						}
-					},
-					top : {
-						def : {
-							v : 178
-						},
-						_160 : {
-							v : 178
-						},
-						_180 : {
-							v : 178
-						}
-					},
-					left : {
-						def : {
-							v : 400
-						},
-						_160 : {
-							v : 400
-						},
-						_180 : {
 							v : 400
 						}
 					},
-					backgroundColor : {
-						def : {
-							v : "rgba(255,0,0,1)"
-						},
-						_160 : {
-							v : "rgba(255,0,0,1)"
-						},
-						_180 : {
-							v : "rgba(255,0,0,1)"
-						}
-					},
-					backgroundColor_Red : {
-						def : {
-							v : 255
-						},
-						_160 : {
-							v : 255
-						},
-						_180 : {
-							v : 255
-						}
-					},
-					backgroundColor_Green : {
-						def : {
-							v : 0
-						},
-						_160 : {
-							v : 0
-						},
-						_180 : {
-							v : 0
-						}
-					},
-					backgroundColor_Blue : {
-						def : {
-							v : 0
-						},
-						_160 : {
-							v : 0
-						},
-						_180 : {
-							v : 0
-						}
-					},
-					backgroundColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_160 : {
-							v : 1
-						},
-						_180 : {
-							v : 1
-						}
-					},
-					borderWidth : {
-						def : {
-							v : 2
-						},
-						_160 : {
-							v : 2
-						},
-						_180 : {
-							v : 2
-						}
-					},
-					borderColor : {
-						def : {
-							v : "rgba(255,255,255,1)"
-						},
-						_160 : {
-							v : "rgba(255,255,255,1)"
-						},
-						_180 : {
-							v : "rgba(255,255,255,1)"
-						}
-					},
-					borderColor_Red : {
-						def : {
-							v : 255
-						},
-						_160 : {
-							v : 255
-						},
-						_180 : {
-							v : 255
-						}
-					},
-					borderColor_Green : {
-						def : {
-							v : 255
-						},
-						_160 : {
-							v : 255
-						},
-						_180 : {
-							v : 255
-						}
-					},
-					borderColor_Blue : {
-						def : {
-							v : 255
-						},
-						_160 : {
-							v : 255
-						},
-						_180 : {
-							v : 255
-						}
-					},
-					borderColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_160 : {
-							v : 1
-						},
-						_180 : {
-							v : 1
-						}
-					}
-				},
-				_1570564752 : {
-					width : {
-						def : {
-							v : 25
-						},
-						_181 : {
-							v : 25
-						},
-						_190 : {
-							v : 25
-						}
-					},
-					height : {
-						def : {
-							v : 0
-						},
-						_181 : {
-							v : 0
-						},
-						_190 : {
-							v : 25
-						}
-					},
 					top : {
 						def : {
-							v : 468
-						},
-						_181 : {
-							v : 468
-						},
-						_190 : {
-							v : 468
+							v : 184
 						}
 					},
 					left : {
 						def : {
-							v : 400
-						},
-						_181 : {
-							v : 400
-						},
-						_190 : {
-							v : 400
-						}
-					},
-					borderWidth : {
-						def : {
-							v : 2
-						},
-						_181 : {
-							v : 2
-						},
-						_190 : {
-							v : 2
-						}
-					},
-					borderColor : {
-						def : {
-							v : "rgba(255,255,255,1)"
-						},
-						_181 : {
-							v : "rgba(255,255,255,1)"
-						},
-						_190 : {
-							v : "rgba(255,255,255,1)"
-						}
-					},
-					borderColor_Red : {
-						def : {
-							v : 255
-						},
-						_181 : {
-							v : 255
-						},
-						_190 : {
-							v : 255
-						}
-					},
-					borderColor_Green : {
-						def : {
-							v : 255
-						},
-						_181 : {
-							v : 255
-						},
-						_190 : {
-							v : 255
-						}
-					},
-					borderColor_Blue : {
-						def : {
-							v : 255
-						},
-						_181 : {
-							v : 255
-						},
-						_190 : {
-							v : 255
-						}
-					},
-					borderColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_181 : {
-							v : 1
-						},
-						_190 : {
-							v : 1
-						}
-					},
-					backgroundColor : {
-						def : {
-							v : "rgba(255,0,0,1)"
-						},
-						_181 : {
-							v : "rgba(255,0,0,1)"
-						},
-						_190 : {
-							v : "rgba(255,0,0,1)"
-						}
-					},
-					backgroundColor_Red : {
-						def : {
-							v : 255
-						},
-						_181 : {
-							v : 255
-						},
-						_190 : {
-							v : 255
-						}
-					},
-					backgroundColor_Green : {
-						def : {
-							v : 0
-						},
-						_181 : {
-							v : 0
-						},
-						_190 : {
-							v : 0
-						}
-					},
-					backgroundColor_Blue : {
-						def : {
-							v : 0
-						},
-						_181 : {
-							v : 0
-						},
-						_190 : {
-							v : 0
-						}
-					},
-					backgroundColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_181 : {
-							v : 1
-						},
-						_190 : {
-							v : 1
-						}
-					},
-					borderRadius_BottomLeft : {
-						def : {
-							v : 90
-						},
-						_181 : {
-							v : 90
-						},
-						_190 : {
-							v : 90
-						}
-					}
-				},
-				_1570829149 : {
-					width : {
-						def : {
-							v : 0
-						},
-						_190 : {
-							v : 0
-						},
-						_210 : {
-							v : 595
-						}
-					},
-					height : {
-						def : {
-							v : 25
-						},
-						_190 : {
-							v : 25
-						},
-						_210 : {
-							v : 25
-						}
-					},
-					top : {
-						def : {
-							v : 468
-						},
-						_190 : {
-							v : 468
-						},
-						_210 : {
-							v : 468
-						}
-					},
-					left : {
-						def : {
-							v : 428
-						},
-						_190 : {
-							v : 428
-						},
-						_210 : {
-							v : 428
-						}
-					},
-					backgroundColor : {
-						def : {
-							v : "rgba(255,0,0,1)"
-						},
-						_190 : {
-							v : "rgba(255,0,0,1)"
-						},
-						_210 : {
-							v : "rgba(255,0,0,1)"
-						}
-					},
-					backgroundColor_Red : {
-						def : {
-							v : 255
-						},
-						_190 : {
-							v : 255
-						},
-						_210 : {
-							v : 255
-						}
-					},
-					backgroundColor_Green : {
-						def : {
-							v : 0
-						},
-						_190 : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						}
-					},
-					backgroundColor_Blue : {
-						def : {
-							v : 0
-						},
-						_190 : {
-							v : 0
-						},
-						_210 : {
-							v : 0
-						}
-					},
-					backgroundColor_Alpha : {
-						def : {
-							v : 1
-						},
-						_190 : {
-							v : 1
-						},
-						_210 : {
-							v : 1
-						}
-					},
-					borderWidth : {
-						def : {
-							v : 2
-						},
-						_190 : {
-							v : 2
-						}
-					},
-					borderWidth_Right : {
-						_210 : {
-							v : 0
-						}
-					},
-					borderColor : {
-						_190 : {
-							v : "rgba(255,255,255,1)"
-						},
-						_210 : {
-							v : "rgba(255,255,255,1)"
-						},
-						def : {
-							v : "rgba(255,255,255,1)"
-						}
-					},
-					borderColor_Red : {
-						_190 : {
-							v : 255
-						},
-						_210 : {
-							v : 255
-						},
-						def : {
-							v : 255
-						}
-					},
-					borderColor_Green : {
-						_190 : {
-							v : 255
-						},
-						_210 : {
-							v : 255
-						},
-						def : {
-							v : 255
-						}
-					},
-					borderColor_Blue : {
-						_190 : {
-							v : 255
-						},
-						_210 : {
-							v : 255
-						},
-						def : {
-							v : 255
-						}
-					},
-					borderColor_Alpha : {
-						_190 : {
-							v : 1
-						},
-						_210 : {
-							v : 1
-						},
-						def : {
-							v : 1
-						}
-					}
-				},
-				_1575278746 : {
-					width : {
-						def : {
-							v : 550
-						}
-					},
-					height : {
-						def : {
-							v : 290
-						}
-					},
-					top : {
-						def : {
-							v : 176
-						}
-					},
-					left : {
-						def : {
-							v : 428
-						},
-						_158 : {
-							v : 428
-						},
-						_230 : {
-							v : 426
-						}
-					},
-					right : {
-						def : {
-							v : 0
-						}
-					},
-					bottom : {
-						def : {
-							v : 0
+							v : 194
 						}
 					},
 					backgroundColor : {
@@ -6038,22 +4349,30 @@ NodeFire_1762239974 = {
 							v : "transparent"
 						}
 					},
+					padding_Left : {
+						def : {
+							v : 100
+						}
+					},
 					opacity : {
-						_230 : {
-							v : 1
+						def : {
+							v : 0
 						},
 						_0 : {
 							v : 0
 						},
-						_158 : {
+						_90 : {
+							v : 1
+						},
+						_70 : {
 							v : 0
 						}
 					}
 				},
-				_1697034633 : {
+				_1777802295 : {
 					width : {
 						def : {
-							v : 250
+							v : 125
 						}
 					},
 					height : {
@@ -6063,32 +4382,32 @@ NodeFire_1762239974 = {
 					},
 					top : {
 						def : {
-							v : 439
+							v : 151
 						}
 					},
 					left : {
 						def : {
-							v : 573
+							v : 191
 						}
 					},
 					backgroundColor : {
 						def : {
-							v : "rgba(122,122,122,1)"
+							v : "rgba(0,0,0,1)"
 						}
 					},
 					backgroundColor_Red : {
 						def : {
-							v : 122
+							v : 0
 						}
 					},
 					backgroundColor_Green : {
 						def : {
-							v : 122
+							v : 0
 						}
 					},
 					backgroundColor_Blue : {
 						def : {
-							v : 122
+							v : 0
 						}
 					},
 					backgroundColor_Alpha : {
@@ -6178,16 +4497,16 @@ NodeFire_1762239974 = {
 					},
 					opacity : {
 						def : {
-							v : 1
+							v : 0
 						},
-						_230 : {
-							v : 1
-						},
-						_195 : {
+						_40 : {
 							v : 0
 						},
 						_0 : {
 							v : 0
+						},
+						_70 : {
+							v : 1
 						}
 					},
 					backgroundImage : {
@@ -6198,76 +4517,6 @@ NodeFire_1762239974 = {
 					right : {
 						def : {
 							v : 0
-						}
-					}
-				},
-				_1698582817 : {
-					width : {
-						def : {
-							v : 347
-						},
-						_230 : {
-							v : 347
-						},
-						_195 : {
-							v : 0
-						}
-					},
-					height : {
-						def : {
-							v : 81
-						},
-						_230 : {
-							v : 81
-						},
-						_195 : {
-							v : 0
-						}
-					},
-					top : {
-						def : {
-							v : 499
-						}
-					},
-					left : {
-						def : {
-							v : 522
-						}
-					},
-					backgroundImage : {
-						def : {
-							v : "http://www.citeforma.pt/imgNoticias/DGERT.jpg"
-						}
-					},
-					backgroundPosition_X : {
-						def : {
-							v : 12
-						}
-					},
-					backgroundPosition_Y : {
-						def : {
-							v : -97
-						}
-					},
-					opacity : {
-						def : {
-							v : 0
-						},
-						_230 : {
-							v : 1
-						},
-						_195 : {
-							v : 0
-						}
-					},
-					backgroundRepeat : {
-						def : {
-							v : "no-repeat"
-						}
-					},
-					backgroundColor : {
-						def : {
-							v : "transparent"
 						}
 					}
 				}
@@ -6793,7 +5042,7 @@ NodeFire_1762239974 = {
 					}
 				}
 			},
-			_1762239974 : {
+			_1777975785 : {
 				d : {
 					o : {}
 				},
@@ -7325,7 +5574,7 @@ NodeFire_1762239974 = {
 					}
 				}
 			},
-			_1762239974 : {
+			_1777975785 : {
 				d : {
 					o : {}
 				},
@@ -8204,9 +6453,7 @@ NodeFire_1762239974 = {
 				}
 			}
 		},
-		mouseover_nfClass_nfSlideshowH : {},
-		active_nfClass_nfSlideshowH : {},
-		mouseover_children : {},
-		mouseout_children : {}
+		inactive : {}
 	}
-}; 
+};
+
