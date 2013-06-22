@@ -11,6 +11,13 @@ Trabalho final do curso de formação profissional de [Programador JAVA](http://
 * Homepage - Teste (por PGodinho): [http://conferenciavidaativa.letpi.com/](http://conferenciavidaativa.letpi.com)
 * Homepage Projeto Final: [http://machadolx.tk/conferencia/home.html](http://machadolx.tk/conferencia/home.html)
 
+### Aplicações utilizadas:
+
+* NodeFire [http://www.nodefire.com](http://www.nodefire.com)
+* Google Drive [https://tools.google.com/dlpage/drive](https://tools.google.com/dlpage/drive)
+* Aptana Studio 3 [http://www.aptana.com](http://www.aptana.com)
+
+
 ## Como?
 ### Participar...
 
