@@ -71,9 +71,3 @@ Provavelmente pode existir uma documentação; se alguém  a quiser escrever.
 ## Contribuição
 
 Todos os voluntários são bem vindos...
-=======
-Conferencia_Site
-================
-
-Repositório do site Conferência Vida Ativa - 2013
->>>>>>> Initial commit
