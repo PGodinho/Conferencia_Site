@@ -1638,7 +1638,7 @@ NodeFire_1959601419 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/administrativos.html"
+						link : "administrativos.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1652,7 +1652,7 @@ NodeFire_1959601419 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/hotelaria.html"
+						link : "hotelaria.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1666,7 +1666,7 @@ NodeFire_1959601419 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/vitrinismo.html"
+						link : "vitrinismo.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1680,7 +1680,7 @@ NodeFire_1959601419 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/java.html"
+						link : "java.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1694,7 +1694,7 @@ NodeFire_1959601419 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/videos.html"
+						link : "videos.html"
 					},
 					cn : {
 						nf_button : 1,
