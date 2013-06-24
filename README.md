@@ -50,7 +50,7 @@ Entenda-se por todo o material não produzido pelos formandos de Java:
 ##### As Caixas de Texto
 
 Os documentos "google" permitem atualizar (quase em tempo real) os conteúdos de texto que estão em falta.
- 
+ *Através da conta Gmail/Google Drive podem editar os textos. 
 ##### O Formulário
 
 O formulário "google" permite simular a inscrição na conferência, e os seus resultados podem ser consultados numa tabela
