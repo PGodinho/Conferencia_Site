@@ -71,5 +71,3 @@ Provavelmente pode existir uma documentação; se alguém  a quiser escrever.
 ## Contribuição
 
 Todos os voluntários são bem vindos...
-
-
