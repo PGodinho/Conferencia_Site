@@ -1531,7 +1531,7 @@ NodeFire_1699574298 = {
 					pUid : "_1384131310",
 					c : 1,
 					link : {
-						link : "conferencia/conferencia.html"
+						link : "../conferencia/conferencia.html"
 					},
 					con : "Conferência"
 				},
@@ -1540,7 +1540,7 @@ NodeFire_1699574298 = {
 					pUid : "_1384131310",
 					c : 1,
 					link : {
-						link : "workInProgress/workInProgress.html"
+						link : "workInProgress.html"
 					},
 					con : "Work in Progress"
 				},
@@ -1577,14 +1577,14 @@ NodeFire_1699574298 = {
 					pUid : "_1384131535",
 					c : 9,
 					link : {
-						link : "conferencia/conferencia/inscricao.html"
+						link : "../conferencia/inscricao.html"
 					},
 					cn : {
 						nf_button : 1,
 						nf_hoverMenu : 1,
 						nf_menu : 1
 					},
-					con : "../conferencia/Inscrições.htkl"
+					con : "Inscrições"
 				},
 				_1384131724 : {
 					id : "Horario",
@@ -1638,7 +1638,7 @@ NodeFire_1699574298 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/administrativos.html"
+						link : "administrativos.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1652,7 +1652,7 @@ NodeFire_1699574298 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/hotelaria.html"
+						link : "hotelaria.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1666,7 +1666,7 @@ NodeFire_1699574298 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/vitrinismo.html"
+						link : "vitrinismo.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1680,7 +1680,7 @@ NodeFire_1699574298 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/java.html"
+						link : "java.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1694,7 +1694,7 @@ NodeFire_1699574298 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/videos.html"
+						link : "videos.html"
 					},
 					cn : {
 						nf_button : 1,
