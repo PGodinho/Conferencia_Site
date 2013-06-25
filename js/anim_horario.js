@@ -1575,7 +1575,7 @@ NodeFire_1587883107 = {
 					id : "Texto",
 					pUid : "_1587883107",
 					c : 1,
-					con : "<iframe src="../restylegc/restylegc.php?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=290&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=conferenciavidaativa%40gmail.com&amp;color=%23333333&amp;ctz=Europe%2FLisbon" style=" border-width:0 " frameborder="0" height="290" scrolling="no" width="545"></iframe>"
+					con : "<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=290&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=conferenciavidaativa%40gmail.com&amp;color=%23333333&amp;ctz=Europe%2FLisbon" style=" border-width:0 " frameborder="0" height="290" scrolling="no" width="545"></iframe>"
 				},
 				_1384131310 : {
 					id : "Menu_de_rodape",
