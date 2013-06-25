@@ -1574,7 +1574,7 @@ NodeFire_1687160290 = {
 					id : "Texto",
 					pUid : "_1687160290",
 					c : 1,
-					con : "<iframe width=\"545\" height=\"270\" frameborder=\"0\" scrolling=\"yes\" src=\"https://docs.google.com/document/d/15YAkUvZJHkKbbqgVIauodHwYFplBwZdBdX8CjGLU-fE/pub?embedded=true\"></iframe>"
+					con : "<iframe width=\"550\" height=\"290\" frameborder=\"0\" scrolling=\"yes\" src=\"https://docs.google.com/document/d/15YAkUvZJHkKbbqgVIauodHwYFplBwZdBdX8CjGLU-fE/pub?embedded=true\"></iframe>"
 				},
 				_1384131310 : {
 					id : "Menu_de_rodape",
