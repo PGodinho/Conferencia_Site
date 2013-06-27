@@ -1706,7 +1706,7 @@ NodeFire_2015428637 = {
 					id : "Video",
 					pUid : "_2015428637",
 					c : 1,
-					con : "<iframe src=\"https://docs.google.com/presentation/d/1zIkSshOF84mhZqFXO2LbEdhUCYUlfM2Jdcq1y7lt8B4/embed?start=true&amp;loop=true&amp;delayms=3000\" frameborder=\"0\" width=\"820\" height=\"400\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>"
+					con : "<iframe src=\"https://docs.google.com/presentation/d/1zIkSshOF84mhZqFXO2LbEdhUCYUlfM2Jdcq1y7lt8B4/embed?start=true&amp;loop=true&amp;delayms=3000\" frameborder=\"0\" width=\"825\" height=\"400\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>"
 				},
 				_1780652235 : {
 					id : "Botao_Java",
@@ -4384,7 +4384,7 @@ NodeFire_2015428637 = {
 				_1780040973 : {
 					width : {
 						def : {
-							v : 820
+							v : 825
 						}
 					},
 					height : {
