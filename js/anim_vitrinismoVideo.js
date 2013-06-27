@@ -1530,7 +1530,7 @@ NodeFire_1951907382 = {
 					pUid : "_1384131310",
 					c : 1,
 					link : {
-						link : "conferencia/conferencia.html"
+						link : "../conferencia/conferencia.html"
 					},
 					con : "Conferência"
 				},
@@ -1539,7 +1539,7 @@ NodeFire_1951907382 = {
 					pUid : "_1384131310",
 					c : 1,
 					link : {
-						link : "workInProgress/workInProgress.html"
+						link : "workInProgress.html"
 					},
 					con : "Work in Progress"
 				},
@@ -1637,7 +1637,7 @@ NodeFire_1951907382 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/administrativos.html"
+						link : "administrativos.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1651,7 +1651,7 @@ NodeFire_1951907382 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/hotelaria.html"
+						link : "hotelaria.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1665,7 +1665,7 @@ NodeFire_1951907382 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/vitrinismo.html"
+						link : "vitrinismo.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1679,7 +1679,7 @@ NodeFire_1951907382 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/java.html"
+						link : "java.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1693,7 +1693,7 @@ NodeFire_1951907382 = {
 					pUid : "_1384131822",
 					c : 9,
 					link : {
-						link : "workInProgress/videos.html"
+						link : "videos.html"
 					},
 					cn : {
 						nf_button : 1,
