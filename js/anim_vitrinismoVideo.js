@@ -1706,7 +1706,7 @@ NodeFire_1951907382 = {
 					id : "Video",
 					pUid : "_1951907382",
 					c : 1,
-					con : "<iframe src=\"https://docs.google.com/presentation/d/1ATISr6TbW1HEcYWVtNM_BJs1m12_joqZAp8W0GQ1NBw/embed?start=true&amp;loop=true&amp;delayms=2500\" frameborder=\"0\" width=\"820\" height=\"400\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>"
+					con : "<iframe src=\"https://docs.google.com/presentation/d/1ATISr6TbW1HEcYWVtNM_BJs1m12_joqZAp8W0GQ1NBw/embed?start=true&amp;loop=true&amp;delayms=2500\" frameborder=\"0\" width=\"825\" height=\"400\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>"
 				},
 				_1780652235 : {
 					id : "Botao_Vitrinismo",
