@@ -14,7 +14,7 @@ function _NF() {
 	Array.prototype.NFisArray = 1
 }
 _NF.prototype._util = function() {
-	function k() {
+	function j() {
 		function d(a) {
 			return RegExp("\\b" + a + "\\b", "g")
 		}
@@ -34,10 +34,10 @@ _NF.prototype._util = function() {
 		};
 		e.hasClass = e.hC = function(a, b, c) {
 			b.NFisArray || ( b = [b]);
-			var g, f = 0, e = b.length;
-			if (a && ( g = a.className)) {
+			var k, f = 0, e = b.length;
+			if (a && ( k = a.className)) {
 				for ( a = 0; a < e; a++)
-					if (d(b[a]).test(g)) {
+					if (d(b[a]).test(k)) {
 						if (!c || 1 == e)
 							return b[a];
 						f++
@@ -60,46 +60,46 @@ _NF.prototype._util = function() {
 					return "descendant"
 			}
 		};
-		e.getChild = function(a, b, c, g) {
-			for (var f = 0, d, a = a.childNodes, i = 0; i < a.length; i++)
-				if (!c || c && e.hC(a[i], c, g))
+		e.getChild = function(a, b, c, k) {
+			for (var f = 0, d, a = a.childNodes, h = 0; h < a.length; h++)
+				if (!c || c && e.hC(a[h], c, k))
 					if (f++, "first-child" == b) {
-						d = a[i];
+						d = a[h];
 						break
 					} else
-						"last-child" == b ? d = a[i] : "number" == typeof b && b == f && ( d = a[i]);
+						"last-child" == b ? d = a[h] : "number" == typeof b && b == f && ( d = a[h]);
 			return d
 		};
 		e.getElementsByAttribute = function(a, b) {
-			for (var c = [], g = a.getElementsByTagName("*"), f = 0; f < g.length; f++)
-				g[f].getAttribute(b) && c.push(g[f]);
+			for (var c = [], k = a.getElementsByTagName("*"), f = 0; f < k.length; f++)
+				k[f].getAttribute(b) && c.push(k[f]);
 			return c
 		};
-		e.getElementsByClassName = e.getNodesByClassName = e.gEBCN = function(a, b, c, g) {
+		e.getElementsByClassName = e.getNodesByClassName = e.gEBCN = function(a, b, c, k) {
 			var f = [];
 			if (a.getElementsByClassName)
 				for (var b = a.getElementsByClassName(b), d = 0; d < b.length; d++)
-					(!g || g && b[d].parentNode == a) && f.push(b[d]);
+					(!k || k && b[d].parentNode == a) && f.push(b[d]);
 			else if (a.getElementsByTagName)
-				for (var i = a.getElementsByTagName("*"), d = 0; d < i.length; d++)
-					e.hC(i[d], b.split(" "), !0) && (!g || g && i[d].parentNode == a) && f.push(i[d]);
+				for (var h = a.getElementsByTagName("*"), d = 0; d < h.length; d++)
+					e.hC(h[d], b.split(" "), !0) && (!k || k && h[d].parentNode == a) && f.push(h[d]);
 			return c && f.length ? f[0] : f || []
 		};
-		e.getElementsFromCoordinates = function(a, b, c, g, f) {
-			for (var d = [], i = 0; i < a.length; i++)
-				if (!a[i][f]) {
-					var h = e.getLocation(a[i]), j = h.x + a[i].offsetWidth, x = h.y + a[i].offsetHeight;
-					if (b && !c && b.x > h.x && b.x < j && b.y > h.y && b.y < x)
-						d.push(a[i]);
+		e.getElementsFromCoordinates = function(a, b, c, k, f) {
+			for (var d = [], h = 0; h < a.length; h++)
+				if (!a[h][f]) {
+					var g = e.getLocation(a[h]), i = g.x + a[h].offsetWidth, z = g.y + a[h].offsetHeight;
+					if (b && !c && b.x > g.x && b.x < i && b.y > g.y && b.y < z)
+						d.push(a[h]);
 					else {
-						var u;
-						if ( u = b)
-							if ( u = c) {
-								u = h.x;
-								var B = h.y, C = x, m = c.x, p = b.y, D = c.y;
-								u = !(b.x > j || m < u || p > C || D < B)
+						var v;
+						if ( v = b)
+							if ( v = c) {
+								v = g.x;
+								var A = g.y, D = z, l = c.x, p = b.y, x = c.y;
+								v = !(b.x > i || l < v || p > D || x < A)
 							}
-						u && (g && b.x < h.x || c.x > j || b.y < h.y || c.y > x) && d.push(a[i])
+						v && (k && b.x < g.x || c.x > i || b.y < g.y || c.y > z) && d.push(a[h])
 					}
 				}
 			return d
@@ -113,21 +113,21 @@ _NF.prototype._util = function() {
 			}
 		};
 		e.getFirstDecendantByClassName = e.gFD = function(a, b, c) {
-			var g = b;
-			if (g) {
-				g.NFisArray || ( g = [b]);
-				if (c && NF.u.d.hC(a, g))
+			var d = b;
+			if (d) {
+				d.NFisArray || ( d = [b]);
+				if (c && NF.u.d.hC(a, d))
 					return a;
-				for ( b = 0; b < g.length; b++)
-					if ( c = NF.u.d.gEBCN(a, g[b], !0))
+				for ( b = 0; b < d.length; b++)
+					if ( c = NF.u.d.gEBCN(a, d[b], !0))
 						return c
 			}
 		};
-		e.getSibling = function(a, b, c, g, f) {
+		e.getSibling = function(a, b, c, d, f) {
 			for (; a = a[b + "Sibling"]; ) {
-				if (!c && !g)
+				if (!c && !d)
 					return a;
-				if (c && e.hC(a, c) || g && a.tagName.toLowerCase() == g.toLowerCase())
+				if (c && e.hC(a, c) || d && a.tagName.toLowerCase() == d.toLowerCase())
 					if (!f || f(a))
 						return a
 			}
@@ -146,9 +146,9 @@ _NF.prototype._util = function() {
 			if ("child" == a[1])
 				return "replace" == a[0] && e.removeChildren(c), e.addChild(a[0], b, c);
 			if (a[1] && 0 == a[1].indexOf(".")) {
-				var g = e.getChild(c, "last-child", a[1].substring(1));
-				if (g)
-					c = g;
+				var d = e.getChild(c, "last-child", a[1].substring(1));
+				if (d)
+					c = d;
 				else
 					return e.addChild(a[2] || "", b, c)
 			}
@@ -157,19 +157,19 @@ _NF.prototype._util = function() {
 			return b
 		};
 		e.addChild = function(a, b, c) {
-			var g;
-			return a.match("first") && ( g = c.childNodes).length ? c.insertBefore(b, g[0]) : c.appendChild(b)
+			var d;
+			return a.match("first") && ( d = c.childNodes).length ? c.insertBefore(b, d[0]) : c.appendChild(b)
 		};
 		e.removeChildren = function(a, b) {
-			for (var c = [], g = a.childNodes, f = 0; f < g.length; f++)
-				if (!b || e.hC(g[f], b))
-					c.push(a.removeChild(g[f])), f--;
+			for (var c = [], d = a.childNodes, f = 0; f < d.length; f++)
+				if (!b || e.hC(d[f], b))
+					c.push(a.removeChild(d[f])), f--;
 			return c
 		};
 		e.moveNode = function(a, b) {
 			a.NFisArray || ( a = [a]);
-			for (var c = [], g = 0; g < a.length; g++)
-				c.push(b.appendChild(a[g].parentNode.removeChild(a[g])));
+			for (var c = [], d = 0; d < a.length; d++)
+				c.push(b.appendChild(a[d].parentNode.removeChild(a[d])));
 			return c
 		};
 		e.removeNode = function(a) {
@@ -198,20 +198,20 @@ _NF.prototype._util = function() {
 			}
 		};
 		e.getLocation = function(a, b) {
-			var c = 0, g = 0;
+			var c = 0, d = 0;
 			if (a.getBoundingClientRect) {
-				var g = a.getBoundingClientRect(), f = b ? b.getBoundingClientRect() : {
+				var d = a.getBoundingClientRect(), f = b ? b.getBoundingClientRect() : {
 					top : 0,
 					left : 0
-				}, d = c = 0;
-				b && ( c = b.clientTop, d = b.clientLeft);
-				c = g.top - f.top - c;
-				g = g.left - f.left - d
+				}, e = c = 0;
+				b && ( c = b.clientTop, e = b.clientLeft);
+				c = d.top - f.top - c;
+				d = d.left - f.left - e
 			}
 			return {
 				top : c,
-				left : g,
-				x : g,
+				left : d,
+				x : d,
 				y : c
 			}
 		};
@@ -241,15 +241,15 @@ _NF.prototype._util = function() {
 		}
 	}
 
-	function j() {
+	function i() {
 		this.getBrowserSpecifcStyleName = function(d) {
 			var e = d, a = "";
 			if (NF.util.browser.ie8Down)
 				e = "";
 			else {
-				for (var b = document.createElement("DIV"), c = " Moz Webkit ms O Khtml".split(" "), g = " -moz- -webkit- -ms- -o- -khtml-".split(" "), f = 0; f < c.length; f++)
+				for (var b = document.createElement("DIV"), c = " Moz Webkit ms O Khtml".split(" "), k = " -moz- -webkit- -ms- -o- -khtml-".split(" "), f = 0; f < c.length; f++)
 					if ( e = c[f], e += !c[f] ? d : NF.util.string.capitalize(d), "undefined" != typeof b.style[e]) {
-						a = g[f];
+						a = k[f];
 						break
 					}
 				delete b
@@ -283,7 +283,7 @@ _NF.prototype._util = function() {
 		}
 	}
 
-	function l() {
+	function t() {
 		var d = navigator.userAgent, e = d.toLowerCase();
 		this.smallMobile = (this.mobile = e.indexOf("mobile") + 1) && 1 < window.devicePixelRatio;
 		this.ipad = e.indexOf("ipad") + 1;
@@ -311,7 +311,7 @@ _NF.prototype._util = function() {
 		}
 	}
 
-	function v() {
+	function n() {
 		function d(a) {
 			NF.u.browser.opera || NF.u.browser.firefox || NF.u.browser.ie9Up || NF.u.browser.webkit ? document.addEventListener("DOMContentLoaded", a, !1) : NF.u.browser.ie ? (document.write("<scr" + "ipt id='NFreadytest' type='text/javascr" + "ipt' defer='defer' src='javascr" + "ipt:void(0)'><\/scr" + "ipt>"), document.getElementById("NFreadytest").onreadystatechange = function() {
 				"complete" == this.readyState && NF.u.e.fire(document, "ready")
@@ -324,13 +324,13 @@ _NF.prototype._util = function() {
 		e.addListener = function(a, b, c) {
 			if (a) {
 				a.NFisArray || ( a = [a]);
-				for (var g = 0; g < a.length; g++) {
+				for (var e = 0; e < a.length; e++) {
 					b && !b.NFisArray && ( b = [b]);
 					for (var f = 0; f < b.length; f++) {
-						var e;
-						if (!( e = a[g].NF_eventStore))
-							e = a[g].NF_eventStore = new NF.util.eventStore(a[g]);
-						e.addEvent(b[f], c);
+						var g;
+						if (!( g = a[e].NF_eventStore))
+							g = a[e].NF_eventStore = new NF.util.eventStore(a[e]);
+						g.addEvent(b[f], c);
 						"ready" == b[f] && d(c)
 					}
 				}
@@ -374,7 +374,7 @@ _NF.prototype._util = function() {
 		}
 	}
 
-	function h() {
+	function g() {
 		function d() {
 			this._linear = {
 				_ : function(a, b, c, d) {
@@ -464,10 +464,10 @@ _NF.prototype._util = function() {
 						return b + c;
 					e || ( e = 0.3 * d);
 					if (f < Math.abs(c))
-						var f = c, i = e / 4;
+						var f = c, h = e / 4;
 					else
-						i = e / (2 * Math.PI) * Math.asin(c / f);
-					return f * Math.pow(2, -10 * a) * Math.sin((a * d - i) * 2 * Math.PI / e) + c + b
+						h = e / (2 * Math.PI) * Math.asin(c / f);
+					return f * Math.pow(2, -10 * a) * Math.sin((a * d - h) * 2 * Math.PI / e) + c + b
 				},
 				back : function(a, b, c, d, f) {
 					void 0 == f && ( f = 1.70158);
@@ -517,10 +517,10 @@ _NF.prototype._util = function() {
 						return b + c;
 					e || ( e = d * 0.3 * 1.5);
 					if (f < Math.abs(c))
-						var f = c, i = e / 4;
+						var f = c, h = e / 4;
 					else
-						i = e / (2 * Math.PI) * Math.asin(c / f);
-					return 1 > a ? -0.5 * f * Math.pow(2, 10 * (a -= 1)) * Math.sin((a * d - i) * 2 * Math.PI / e) + b : 0.5 * f * Math.pow(2, -10 * (a -= 1)) * Math.sin((a * d - i) * 2 * Math.PI / e) + c + b
+						h = e / (2 * Math.PI) * Math.asin(c / f);
+					return 1 > a ? -0.5 * f * Math.pow(2, 10 * (a -= 1)) * Math.sin((a * d - h) * 2 * Math.PI / e) + b : 0.5 * f * Math.pow(2, -10 * (a -= 1)) * Math.sin((a * d - h) * 2 * Math.PI / e) + c + b
 				},
 				back : function(a, b, c, d, f) {
 					void 0 == f && ( f = 1.70158);
@@ -544,8 +544,8 @@ _NF.prototype._util = function() {
 
 		var e = this;
 		this.tween = function(a) {
-			var b = parseFloat(a.startValue), c = parseFloat(a.endValue), d = a.frameDistance;
-			return b == c || isNaN(b) || isNaN(c) || 0 == d ? a.startValue : e.ease["_"+a.ease.direction][a.ease.type](a.framePos - a.startFrame, b, c - b, d)
+			var b = parseFloat(a.startValue), d = parseFloat(a.endValue), g = a.frameDistance;
+			return b == d || isNaN(b) || isNaN(d) || 0 == g ? a.startValue : e.ease["_"+a.ease.direction][a.ease.type](a.framePos - a.startFrame, b, d - b, g)
 		};
 		d.prototype = this;
 		this.ease = new d
@@ -553,12 +553,12 @@ _NF.prototype._util = function() {
 	this.string = new function(){this.capitalize=function(d){if(0<d.length)return d.substring(0,1).toUpperCase()+d.substring(1)};this.generateUniqueId=function(d){var e=((new Date).getTime()+"").substring(3);return d+"_"+e}};
 	this.object = new function(){var d=this;this.clone=function(e,a){if(!e||"object"!=typeof e||e.nodeType)return e;var a=a||[],b;for(b in a)if(e==a[b])return e;a.push(e);var c=e.NFisArray?[]:{};for(b in e)c[b]=d.clone(e[b],a);return c};this.convertAttributeToObject=function(d,a){d=d.getAttribute(a,2);return eval("("+d+")")||{}}};
 	this.array = new function(){this.sortNumericArray=function(d){return d.sort(function(d,a){return d-a})}};
-	k.prototype = this;
-	this.d = this.dom = new k;
 	j.prototype = this;
-	this.c = this.css = new j;
-	l.prototype = this;
-	this.browser = new l;
+	this.d = this.dom = new j;
+	i.prototype = this;
+	this.c = this.css = new i;
+	t.prototype = this;
+	this.browser = new t;
 	this.eventStore = function(d) {
 		var e = {};
 		this.addEvent = function(a, b) {
@@ -581,31 +581,31 @@ _NF.prototype._util = function() {
 				return c.apply(d, b)
 		}
 	};
-	v.prototype = this;
-	this.e = this.event = new v;
-	h.prototype = this;
-	this.a = this.animate = new h
+	n.prototype = this;
+	this.e = this.event = new n;
+	g.prototype = this;
+	this.a = this.animate = new g
 };
 NF._util.prototype = NF;
 _NF.prototype.u = _NF.prototype.util = new NF._util;
-_NF.prototype.stageManager = new function(){function k(d){for(var e in h.hold)NF.u.d.rC(h.hold[e],"nfHold");h.hold=null;l(d.target||d.srcElement,["click"]);l(d.target||d.srcElement,["mousehold"],!0)}function j(d){l(d.target||d.srcElement,["mousedown","active"])}function l(d,e,a){for(;d;){if(d.nfUid&&!a)return;d=d.parentNode}for(d=0;d<e.length;d++)for(var b in h.stages)h.stages[b].BF||(h.stages[b].stopActionTimelines(e[d],null),"active"==e[d]&&h.setElementActive())}function v(){function d(){if(!a.showElm){var b=document.createElement("TEXTAREA"),c=b.style;c.position="absolute";c.top="5px";c.left="5px";c.color="#000";c.backgroundColor="rgb(255,255,255)";c.border="solid 2px #333";c.fontFamily="Arial";c.fontSize="12px";c.padding="5px";c.overflow="auto";c.height="58px";c.width="40%";c.minWidth="40px";c.zIndex=999999;c.boxShadow="1px 1px 5px #222";document.body.appendChild(b);a.showElm=b;NF.u.e.addDomListener(b,"dblclick",function(b){a.showElm.value="";b.target.style.display="none";a.errorLog=[]});NF.u.e.addDomListener(b,"mousedown",function(){clearTimeout(a.hideTimer)})}return a.showElm}function e(b){clearTimeout(a.hideTimer);b?d().style.display="none":a.hideTimer=setTimeout(function(){e(!0)},5E3)}var a=this;a.showElm;a.errorLog=[];a.logEnabled;a.hideTimer;this.show=function(a){var c=d();c.style.display="block";c.value=a+"\n\n/*Double click to hide this message.*/";e()};this.enableLog=function(){a.logEnabled=!0};this.logError=function(b){if(a.logEnabled){a.errorLog.push(b);var c=d();c.style.display="block";c.scrollTop=0;c.value=a.errorLog.length+":\t"+b+(c.value?"\n"+c.value:"\n\n/*Double click to hide this message.*/");e()}}}var h=this;h.stages={};h.curStage;h.activeElm;h.classDefs={_0:"Stage",_1:"Box",_2:"Circle",_3:"Grid",_4:"List",_5:"Floatleft",_6:"Floatright",_7:"RotatorH",_8:"RotatorV",_9:"Item",_10:"SlideshowH",_11:"SlideshowV",_12:"Frames"};h.cds={_9:1};window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;window.cancelAnimationFrame=window.cancelAnimationFrame||window.mozCancelAnimationFrame||window.webkitCancelAnimationFrame||window.msCancelAnimationFrame;NF.u.e.addListener(document,"ready",function(){var d=NF.u.e.addDomListener;d(document,"mouseup",k);d(document,"mousedown",j);d=".nfStage {cursor:default;-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);position:relative;user-select:none;-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;background-color:#fff;border:solid 1px #333;width:800px;height:400px;font-family:Arial, Verdana, Sans-Serif;font-size:12px;color:#333;font-weight:normal;line-height:normal;}.nfStage * {cursor:inherit;}.nfCenterBlock {position:absolute;margin:auto;left:0px;right:0px;top:0px;bottom:0px;}";d+=".nfStage, .nfStage .nfA, .nfStage .nfA>nfB, .nfBorderBox {box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}";d+=".nfStage .nfA {position:absolute;}";d+=".nfStage .nfA {width:10px;height:10px;border:solid 0px #333;background-color:#b2d1f0;background-color:rgba(0,102,204,.3);}";d+=".nfStage .nfA>.nfB {position:relative;width:100%;}";d+=".nfStage .nfA.nfGrid>.nfItem {background-color:transparent;}";d+=".nfStage .nfA.nfList>.nfItem {position:relative;padding:5px;}";d+=".nfStage .nfA.nfFloatleft>.nfItem {position:relative;float:left;padding:10px;}";d+=".nfStage .nfA.nfFloatright>.nfItem {position:relative;float:right;padding:10px;}";d+=".nfStage #nfDownLevelContent {display:none;}";d+=".nfStage .nfA.nf_hoverMenu>.nfA, .nfStage.nf_hoverMenu>.nfA, .nfStage .nfA.nf_clickMenu>.nfA, .nfStage.nf_clickMenu>.nfA{display:none;}";d+=".nfStage .nfA.nf_hoverMenu.nfDelayHoverLineage>.nfA, .nfStage.nf_hoverMenu.nfDelayHoverLineage>.nfA, .nfStage .nfA.nf_clickMenu.nfActiveLineage>.nfA, .nfStage.nf_clickMenu.nfActiveLineage>.nfA{display:block;z-index:1;}";d+=".nfStage .nfRotatorH, .nfStage .nfRotatorV {background-color:transparent;}";d+=".nfStage .nfSlideshowH, .nfStage .nfSlideshowV {overflow:hidden;}";d+=".nfStage .nfSlideshowH>.nfSlideshowFrames, .nfStage .nfSlideshowV>.nfSlideshowFrames {height:100%;width:100%;background-color:transparent;}";d+=".nfStage .nfSlideshowH>.nfSlideshowFrames>.nfItem, .nfStage .nfSlideshowV>.nfSlideshowFrames>.nfItem {top:0px;left:0px;width:100%;height:100%;border:solid 1px #999;}";NF.u.css.addSheet(d);for(var e=NF.u.d.getNodesByClassName(document,"nfStage"),d=0;d<e.length;d++){var a=NF.u.object.convertAttributeToObject(e[d],"data-nfw");"stage"==a.type&&(new NF.stage(e[d],a)).create()}for(d in h.stages)if((e=h.stages[d].params.browsers)&&(e.css3&&NF.u.browser.noCSS3||e.css3D&&NF.u.browser.no3d)){e=h.stages[d].root.children;for(a=0;a<e.length;a++)e[a].style.display="nfDownLevelContent"==e[a].id?"block":"none"}else h.stages[d].params.autoRun&&h.playEvent(h.stages[d],"ready")});NF.u.e.addDomListener(window,"load",function(){for(var d in h.stages)h.stages[d].params.autoRun&&h.playEvent(h.stages[d],"load")});this.setElementActive=function(d,e){var a=h.activeElm;h.activeElm&&a.element!=e&&a.stage.setElementInactive(a.element);if(null!=d){if(!a||a.element!=e)d.setElementActive(e),h.activeElm={stage:d,element:e}}else h.activeElm=null};this.add=function(d){h.stages[d.root.nfUid]=d;h.curStage=d};this.playEvent=function(d,e,a,b,c){if(d=d.data.events[e])for(var g in d.timelines)if(!(a&&a!=g)){if(null!=c){var e=d.timelines[g],f=c;f>e.framePos.max&&(f=e.framePos.max);e.setTime(e.getTime(f))}d.timelines[g][b||"play"]()}};v.prototype=this;this.debug=new v};
-_NF.prototype.stage = function(k, j) {
-	function l(a) {
+_NF.prototype.stageManager = new function(){function j(d){for(var e in g.hold)NF.u.d.rC(g.hold[e],"nfHold");g.hold=null;t(d.target||d.srcElement,["click"]);t(d.target||d.srcElement,["mousehold"],!0)}function i(d){t(d.target||d.srcElement,["mousedown","active"])}function t(d,e,a){for(;d;){if(d.nfUid&&!a)return;d=d.parentNode}for(d=0;d<e.length;d++)for(var b in g.stages)g.stages[b].BF||(g.stages[b].stopActionTimelines(e[d],null),"active"==e[d]&&g.setElementActive())}function n(){function d(){if(!a.showElm){var b=document.createElement("TEXTAREA"),d=b.style;d.position="absolute";d.top="5px";d.left="5px";d.color="#000";d.backgroundColor="rgb(255,255,255)";d.border="solid 2px #333";d.fontFamily="Arial";d.fontSize="12px";d.padding="5px";d.overflow="auto";d.height="58px";d.width="40%";d.minWidth="40px";d.zIndex=999999;d.boxShadow="1px 1px 5px #222";document.body.appendChild(b);a.showElm=b;NF.u.e.addDomListener(b,"dblclick",function(b){a.showElm.value="";b.target.style.display="none";a.errorLog=[]});NF.u.e.addDomListener(b,"mousedown",function(){clearTimeout(a.hideTimer)})}return a.showElm}function e(b){clearTimeout(a.hideTimer);b?d().style.display="none":a.hideTimer=setTimeout(function(){e(!0)},5E3)}var a=this;a.showElm;a.errorLog=[];a.logEnabled;a.hideTimer;this.show=function(a){var c=d();c.style.display="block";c.value=a+"\n\n/*Double click to hide this message.*/";e()};this.enableLog=function(){a.logEnabled=!0};this.logError=function(b){if(a.logEnabled){a.errorLog.push(b);var c=d();c.style.display="block";c.scrollTop=0;c.value=a.errorLog.length+":\t"+b+(c.value?"\n"+c.value:"\n\n/*Double click to hide this message.*/");e()}}}var g=this;g.stages={};g.curStage;g.activeElm;g.classDefs={_0:"Stage",_1:"Box",_2:"Circle",_3:"Grid",_4:"List",_5:"Floatleft",_6:"Floatright",_7:"RotatorH",_8:"RotatorV",_9:"Item",_10:"SlideshowH",_11:"SlideshowV",_12:"Frames"};g.cds={_9:1};window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;window.cancelAnimationFrame=window.cancelAnimationFrame||window.mozCancelAnimationFrame||window.webkitCancelAnimationFrame||window.msCancelAnimationFrame;NF.u.e.addListener(document,"ready",function(){var d=NF.u.e.addDomListener;d(document,"mouseup",j);d(document,"mousedown",i);d=".nfStage {cursor:default;-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);position:relative;user-select:none;-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;background-color:#fff;border:solid 1px #333;width:800px;height:400px;font-family:Arial, Verdana, Sans-Serif;font-size:12px;color:#333;font-weight:normal;line-height:normal;}.nfStage * {cursor:inherit;}.nfCenterBlock {position:absolute;margin:auto;left:0px;right:0px;top:0px;bottom:0px;}";d+=".nfStage, .nfStage .nfA {background-repeat:no-repeat;background-position:center center;background-size:contain;}";d+=".nfStage, .nfStage .nfA, .nfStage .nfA>nfB, .nfBorderBox {box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}";d+=".nfStage .nfA {position:absolute;}";d+=".nfStage .nfA {width:10px;height:10px;border:solid 0px #333;background-color:#b2d1f0;background-color:rgba(0,102,204,.3);}";d+=".nfStage .nfA>.nfB {position:relative;width:100%;}";d+=".nfStage .nfA.nfGrid>.nfItem {background-color:transparent;}";d+=".nfStage .nfA.nfList>.nfItem {position:relative;padding:5px;}";d+=".nfStage .nfA.nfFloatleft>.nfItem {position:relative;float:left;padding:10px;}";d+=".nfStage .nfA.nfFloatright>.nfItem {position:relative;float:right;padding:10px;}";d+=".nfStage #nfDownLevelContent {display:none;}";d+=".nfStage .nfA.nf_hoverMenu>.nfA, .nfStage.nf_hoverMenu>.nfA, .nfStage .nfA.nf_clickMenu>.nfA, .nfStage.nf_clickMenu>.nfA{display:none;}";d+=".nfStage .nfA.nf_hoverMenu.nfDelayHoverLineage>.nfA, .nfStage.nf_hoverMenu.nfDelayHoverLineage>.nfA, .nfStage .nfA.nf_clickMenu.nfActiveLineage>.nfA, .nfStage.nf_clickMenu.nfActiveLineage>.nfA{display:block;z-index:1;}";d+=".nfStage .nfRotatorH, .nfStage .nfRotatorV {background-color:transparent;}";d+=".nfStage .nfSlideshowH, .nfStage .nfSlideshowV {overflow:hidden;}";d+=".nfStage .nfSlideshowH>.nfSlideshowFrames, .nfStage .nfSlideshowV>.nfSlideshowFrames {height:100%;width:100%;background-color:transparent;}";d+=".nfStage .nfSlideshowH>.nfSlideshowFrames>.nfItem, .nfStage .nfSlideshowV>.nfSlideshowFrames>.nfItem {top:0px;left:0px;width:100%;height:100%;border:solid 1px #999;}";NF.u.css.addSheet(d);for(var e=NF.u.d.getNodesByClassName(document,"nfStage"),d=0;d<e.length;d++){var a=NF.u.object.convertAttributeToObject(e[d],"data-nfw");"stage"==a.type&&(new NF.stage(e[d],a)).create()}for(d in g.stages)if((e=g.stages[d].params.browsers)&&(e.css3&&NF.u.browser.noCSS3||e.css3D&&NF.u.browser.no3d)){e=g.stages[d].root.children;for(a=0;a<e.length;a++)e[a].style.display="nfDownLevelContent"==e[a].id?"block":"none"}else g.stages[d].params.autoRun&&g.playEvent(g.stages[d],"ready")});NF.u.e.addDomListener(window,"load",function(){for(var d in g.stages)g.stages[d].params.autoRun&&g.playEvent(g.stages[d],"load")});this.setElementActive=function(d,e){var a=g.activeElm;g.activeElm&&a.element!=e&&a.stage.setElementInactive(a.element);if(null!=d){if(!a||a.element!=e)d.setElementActive(e),g.activeElm={stage:d,element:e}}else g.activeElm=null};this.add=function(d){g.stages[d.root.nfUid]=d;g.curStage=d};this.playEvent=function(d,e,a,b,c){if(d=d.data.events[e])for(var g in d.timelines)if(!(a&&a!=g)){if(null!=c){var e=d.timelines[g],f=c;f>e.framePos.max&&(f=e.framePos.max);e.setTime(e.getTime(f))}d.timelines[g][b||"play"]()}};n.prototype=this;this.debug=new n};
+_NF.prototype.stage = function(j, i) {
+	function t(a) {
 		if (a.loadCount == a.images.length)
-			return a = a.nfUid, f.elements[a] && e(f.elements[a], "preloadelement", "play"), i.count++, i.count == i.elmCount && n.playEvent(f, "preloadall"), !0
+			return a = a.nfUid, f.elements[a] && e(f.elements[a], "preloadelement", "play"), h.count++, h.count == h.elmCount && q.playEvent(f, "preloadall"), !0
 	}
 
-	function v(a) {
-		t[a] || (t[a] = {
+	function n(a) {
+		u[a] || (u[a] = {
 			nfUid : a,
 			raw : "",
 			images : [],
 			loadCount : 0
-		}, i.elmCount++);
-		return t[a]
+		}, h.elmCount++);
+		return u[a]
 	}
 
-	function h(a, b) {
+	function g(a, b) {
 		if ((f.BF || b) && a)
 			a = a.replace(/\&\#10\;/g, "\n"), a = a.replace(/\&\#13\;/g, "\r");
 		return a
@@ -621,94 +621,94 @@ _NF.prototype.stage = function(k, j) {
 					var b = e;
 					f.stopActionTimelines("mouseout", b, !0);
 					NF.u.d.aC(b, "nfDelayHover");
-					for (var c = b; c && c.nfUid; )
-						NF.u.d.aC(c, "nfDelayHoverLineage"), c = c.parentNode;
+					for (var d = b; d && d.nfUid; )
+						NF.u.d.aC(d, "nfDelayHoverLineage"), d = d.parentNode;
 					a("mouseover", b)
-				}, c(e, "over")), n.hold && (n.hold[e.nfUid] && NF.u.d.hC(e, "nf_button")) && (g(e), a("mousehold", e)))
+				}, c(e, "over")), q.hold && (q.hold[e.nfUid] && NF.u.d.hC(e, "nf_button")) && (k(e), a("mousehold", e)))
 			});
 			d(b, "mouseout", function(d) {
 				for (var e = d.target || d.srcElement; e && !e.nfUid; )
 					e = e.parentNode;
-				for (var m = d.toElement || d.relatedTarget, d = m; m && !m.nfUid; )
-					m = m.parentNode;
-				m = m || d;
-				if (e && m && e == b) {
+				for (var l = d.toElement || d.relatedTarget, d = l; l && !l.nfUid; )
+					l = l.parentNode;
+				l = l || d;
+				if (e && l && e == b) {
 					NF.u.d.rC(e, "nfHover");
 					clearTimeout(f.dly.out);
 					f.dly.init_a || (f.dly.init_a = e);
 					f.dly.elms[e.nfUid] = e;
-					var u, i;
-					for (i in f.dly.elms) {
-						u = c(f.dly.elms[i], "out");
+					var v, h;
+					for (h in f.dly.elms) {
+						v = c(f.dly.elms[h], "out");
 						break
 					}
 					f.dly.out = setTimeout(function() {
-						var b = m;
+						var b = l;
 						f.stopActionTimelines("mouseover", b);
-						for (var c in f.dly.elms) {
-							var d = f.dly.elms[c];
-							for (d != b && NF.u.d.rC(d, "nfDelayHover"); d && d.nfUid && d != b && !NF.u.d.isDescendant(d, b); )
-								NF.u.d.rC(d, "nfDelayHoverLineage"), d = d.parentNode
+						for (var d in f.dly.elms) {
+							var c = f.dly.elms[d];
+							for (c != b && NF.u.d.rC(c, "nfDelayHover"); c && c.nfUid && c != b && !NF.u.d.isDescendant(c, b); )
+								NF.u.d.rC(c, "nfDelayHoverLineage"), c = c.parentNode
 						}
 						a("mouseout", f.dly.init_a, null, b);
 						f.dly.init_a = null;
 						f.dly.elms = {}
-					}, u);
-					if (n.hold && n.hold[e.nfUid] && NF.u.d.hC(e, "nf_button")) {
-						f.stopActionTimelines("mousehold", m);
-						for ( u = m; e && e != f.root; )
-							n.hold[e.nfUid] && (e != u && !NF.u.d.isDescendant(e, u)) && NF.u.d.rC(e, "nfHold"), e = e.parentNode
+					}, v);
+					if (q.hold && q.hold[e.nfUid] && NF.u.d.hC(e, "nf_button")) {
+						f.stopActionTimelines("mousehold", l);
+						for ( v = l; e && e != f.root; )
+							q.hold[e.nfUid] && (e != v && !NF.u.d.isDescendant(e, v)) && NF.u.d.rC(e, "nfHold"), e = e.parentNode
 					}
 				}
 			});
-			d(b, "mousedown", function(c) {
-				for ( c = c.target || c.srcElement; c && !c.nfUid; )
-					c = c.parentNode;
-				c && c == b && (g(c), f.stopActionTimelines("mousedown", c), a("mousedown", c, !0, null, !0), a("mousehold", c), n.setElementActive(f, c))
-			});
-			d(b, "click", function(c) {
-				for (var d = c.target || c.srcElement; d && !d.nfUid; )
+			d(b, "mousedown", function(d) {
+				for ( d = d.target || d.srcElement; d && !d.nfUid; )
 					d = d.parentNode;
-				if (d && d == b && (f.stopActionTimelines("click", d), a("click", d, !0, null, !0), ( c = d.nfLink) && !f.editorDesignMode)) {
-					c.code && f.executeCode(c.code, d);
-					var d = {_self:1,_parent:1}[c.where || "_self"], e = f.params.linksWhere;
-					c.link && window.open(c.link, e && d ? e : c.where || "_self")
+				d && d == b && (k(d), f.stopActionTimelines("mousedown", d), a("mousedown", d, !0, null, !0), a("mousehold", d), q.setElementActive(f, d))
+			});
+			d(b, "click", function(d) {
+				for (var c = d.target || d.srcElement; c && !c.nfUid; )
+					c = c.parentNode;
+				if (c && c == b && (f.stopActionTimelines("click", c), a("click", c, !0, null, !0), ( d = c.nfLink) && !f.editorDesignMode)) {
+					d.code && f.executeCode(d.code, c);
+					var c = {_self:1,_parent:1}[d.where || "_self"], e = f.params.linksWhere;
+					d.link && window.open(d.link, e && c ? e : d.where || "_self")
 				}
 			})
 		}
 	}
 
-	function e(a, b, c, d) {
-		"stop" == c && d.nfOptions["P" + b.replace("mouse", "")] && ( c = "pause");
+	function e(a, b, d, c) {
+		"stop" == d && c.nfOptions["P" + b.replace("mouse", "")] && ( d = "pause");
 		var e = a.nfTimelines;
 		if (e && ( e = e[b]))
-			return e.targElm = d || a, e[c](), !0
+			return e.targElm = c || a, e[d](), !0
 	}
 
-	function a(a, c, d, e, m) {
+	function a(a, d, c, e, l) {
 		do
-			if (!e || !("descendant" == NF.u.d.isRelation(e, c) || e == c)) {
-				var p = c.nfTimelines;
-				if (p && p[a] && (!m || !p[a].options.block || !p[a].isPlaying()))
-					(!f.act[a][a][c.nfUid] || d) && b(p[a].parentObj.actType, c, c, d);
-				for (var i = c; i != f.root && ( i = i.parentNode); ) {
-					var p = i.nfTimelines, q;
-					for (q in p) {
-						var s = p[q].parentObj.actType;
-						if (s.base == a && (s.isChildren || s.className) && (!f.act[s.base][q][c.nfUid] || d) && !(s.isChildren && c.parentNode != i))
-							if (!s.className || NF.u.d.hC(c, s.className))
-								(!m || !p[q].options.block || !p[q].isPlaying()) && b(s, i, c, d)
+			if (!e || !("descendant" == NF.u.d.isRelation(e, d) || e == d)) {
+				var p = d.nfTimelines;
+				if (p && p[a] && (!l || !p[a].options.block || !p[a].isPlaying()))
+					(!f.act[a][a][d.nfUid] || c) && b(p[a].parentObj.actType, d, d, c);
+				for (var h = d; h != f.root && ( h = h.parentNode); ) {
+					var p = h.nfTimelines, g;
+					for (g in p) {
+						var m = p[g].parentObj.actType;
+						if (m.base == a && (m.isChildren || m.className) && (!f.act[m.base][g][d.nfUid] || c) && !(m.isChildren && d.parentNode != h))
+							if (!m.className || NF.u.d.hC(d, m.className))
+								(!l || !p[g].options.block || !p[g].isPlaying()) && b(m, h, d, c)
 					}
 				}
 			}
-		while(c!=f.root&&(c=c.parentNode))
+		while(d!=f.root&&(d=d.parentNode))
 	}
 
-	function b(a, b, c, d) {
-		d && e(b, a.uid, "stop", c);
-		if ((d || !f.act[a.base][a.uid][c.nfUid]) && e(b, a.uid, "play", c))
-			f.act[a.base][a.uid][c.nfUid] = {
-				tElm : c,
+	function b(a, b, d, c) {
+		c && e(b, a.uid, "stop", d);
+		if ((c || !f.act[a.base][a.uid][d.nfUid]) && e(b, a.uid, "play", d))
+			f.act[a.base][a.uid][d.nfUid] = {
+				tElm : d,
 				eElm : b
 			}
 	}
@@ -721,18 +721,18 @@ _NF.prototype.stage = function(k, j) {
 		return 0
 	}
 
-	function g(a) {
-		for (n.hold = {}; a && a != f.root; )
-			n.hold[a.nfUid] = a, NF.u.d.aC(a, "nfHold"), a = a.parentNode
+	function k(a) {
+		for (q.hold = {}; a && a != f.root; )
+			q.hold[a.nfUid] = a, NF.u.d.aC(a, "nfHold"), a = a.parentNode
 	}
 
 	var f = this;
 	var _this = this;
-	f.root = k;
+	f.root = j;
 	f.nfUid
 	f.data
 	f.styleDefs
-	f.params = j;
+	f.params = i;
 	f.elements = {};
 	f.seoElements = {};
 	f.act = {};
@@ -742,27 +742,27 @@ _NF.prototype.stage = function(k, j) {
 	f.dly = {
 		elms : {}
 	};
-	f.BF = j.bigFace;
+	f.BF = i.bigFace;
 	f.editorDesignMode
-	var t = {}, i = {
+	var u = {}, h = {
 		elmCount : 0,
 		count : 0
-	}, n = NF.stageManager, z = NF.stageDataManager;
+	}, q = NF.stageManager, w = NF.stageDataManager;
 	(function() {
 		var a;
-		if ( a = j.nfUid)
-			NF.u.d.aC(k, a), k.nfUid = a, j.data = j.data || window[a].data;
-		f.nfUid = k.nfUid;
-		NF.u.d.aC(k, "nfSP1");
-		NF.u.d.aC(k, "nfSP2");
-		NF.u.d.aC(k, "nfSP3");
-		n.add(f);
+		if ( a = i.nfUid)
+			NF.u.d.aC(j, a), j.nfUid = a, i.data = i.data || window[a].data;
+		f.nfUid = j.nfUid;
+		NF.u.d.aC(j, "nfSP1");
+		NF.u.d.aC(j, "nfSP2");
+		NF.u.d.aC(j, "nfSP3");
+		q.add(f);
 		a = document.createElement("style");
 		document.getElementsByTagName("head")[0].appendChild(a);
 		f.sheet = document.styleSheets[document.styleSheets.length - 1];
 		f.data = new NF.stageData(f);
-		f.styleDefs = z.getStyleDefs();
-		f.seoElements[f.nfUid] = k;
+		f.styleDefs = w.getStyleDefs();
+		f.seoElements[f.nfUid] = j;
 		a = NF.u.d.getNodesByClassName(f.root, "nfA");
 		for (var b = 0; b < a.length; b++) {
 			var c = NF.u.object.convertAttributeToObject(a[b], "data-nfw");
@@ -773,13 +773,13 @@ _NF.prototype.stage = function(k, j) {
 			a[b].parentNode.nfContentElm = a[b];
 		d(f.root)
 	})();
-	this.applyCSS = function(a, b, c, d, e, p) {
-		f.rules[p] ? f.rules[p].style[c] = e ? "" : d : e || (f.sheet.insertRule ? ( c = f.sheet.cssRules, c = 0 < c.length ? c.length - 1 : 0, f.sheet.insertRule(a + "{" + b + ":" + d + ";}", c), f.rules[p] = f.sheet.cssRules[c]) : (f.sheet.addRule(a, b + ":" + d + ";"), f.rules[p] = f.sheet.rules[sheet.rules.length - 1]))
+	this.applyCSS = function(a, b, d, c, e, p) {
+		f.rules[p] ? f.rules[p].style[d] = e ? "" : c : e || (f.sheet.insertRule ? ( d = f.sheet.cssRules, d = 0 < d.length ? d.length - 1 : 0, f.sheet.insertRule(a + "{" + b + ":" + c + ";}", d), f.rules[p] = f.sheet.cssRules[d]) : (f.sheet.addRule(a, b + ":" + c + ";"), f.rules[p] = f.sheet.rules[sheet.rules.length - 1]))
 	};
 	this.getStyleDefNodeFromPointer = function(a, b) {
-		for (var a = a.split(b), c = f.styleDefs[a[0]], d = 1; d < a.length; d++)
-			c = c[a[d]];
-		return c
+		for (var a = a.split(b), d = f.styleDefs[a[0]], c = 1; c < a.length; c++)
+			d = d[a[c]];
+		return d
 	};
 	this.create = function(a) {
 		a = a || {};
@@ -796,76 +796,76 @@ _NF.prototype.stage = function(k, j) {
 			} : f.createElement("NodeFire" + e, c[e]);
 			for (e in c)
 			if ( b = f.elements["NodeFire" + e]) {
-				var m;
-				if (!b.nfAppended && ( m = b.nfUidParent))
-					f.elements[m].appendChild(b), NF.u.e.fire(f, "elementAdded", {
+				var l;
+				if (!b.nfAppended && ( l = b.nfUidParent))
+					f.elements[l].appendChild(b), NF.u.e.fire(f, "elementAdded", {
 						element : b
 					});
 				d(b)
 			} else
 				delete f.elements["NodeFire" + e];
-			m = f.params.data;
-			for (var p in m)
+			l = f.params.data;
+			for (var p in l)
 			if ("data" != p) {
-				b = m[p];
+				b = l[p];
 				c = f.data.addEvent({
 					nfUid : p
 				});
 				e = c.actType.base;
 				f.act[e] || (f.act[e] = {});
 				f.act[e][p] = {};
-				for (var i in b)
-				if ("d" != i) {
-					var q = b[i];
-					e = c.addTimeline(f.elements["NodeFire" + i]);
-					e.options = q.d.o || {};
-					for (var s in q)
-					if ("d" != s) {
-						var g = q[s], y = e.addElement(f.elements[(m.data.elmOrder[s] && m.data.elmOrder[s].rule ? "" : "NodeFire") + s]), n;
-						for (n in g) {
-							var j = g[n];
-							if ("d" != n) {
-								var l = y.addStyle(f.getStyleDefNodeFromPointer(n, "_")), z = l.styleDefNode, k;
-								for (k in j)
-								if ("d" != k) {
-									var t = j[k];
-									"string" == typeof t.v && (t.v = h(t.v, !0));
-									var w = t.p || {}, E = w.e ? {
-										direction : w.e.d,
-										type : w.e.t
+				for (var h in b)
+				if ("d" != h) {
+					var s = b[h];
+					e = c.addTimeline(f.elements["NodeFire" + h]);
+					e.options = s.d.o || {};
+					for (var m in s)
+					if ("d" != m) {
+						var B = s[m], y = e.addElement(f.elements[(l.data.elmOrder[m] && l.data.elmOrder[m].rule ? "" : "NodeFire") + m]), q;
+						for (q in B) {
+							var i = B[q];
+							if ("d" != q) {
+								var k = y.addStyle(f.getStyleDefNodeFromPointer(q, "_")), t = k.styleDefNode, w;
+								for (w in i)
+								if ("d" != w) {
+									var j = i[w];
+									"string" == typeof j.v && (j.v = g(j.v, !0));
+									var u = j.p || {}, E = u.e ? {
+										direction : u.e.d,
+										type : u.e.t
 									} : {
 										direction : "linear",
 										type : "_"
-									}, A = "def" == k ? 0 : parseInt(k.substring(1)), F = e.getTime(A);
-									l.addKey(t.v, {
-										uid : k,
-										unit : w.unit,
-										framePos : A,
+									}, C = "def" == w ? 0 : parseInt(w.substring(1)), F = e.getTime(C);
+									k.addKey(j.v, {
+										uid : w,
+										unit : u.unit,
+										framePos : C,
 										seconds : F,
 										ease : E
-									}, k);
-									z.data.isImage && t.v && ( w = v("NodeFire" + s), -1 == w.raw.indexOf(t.v) && (w.raw += t.v, w.images.push(t.v)))
+									}, w);
+									t.data.isImage && j.v && ( u = n("NodeFire" + m), -1 == u.raw.indexOf(j.v) && (u.raw += j.v, u.images.push(j.v)))
 								}
-								if (l.hasKey(!0) || "ready" != p)
-									l = l.styleDefNodeRoot.data.transElms, j = y.domElement.nfUid, (l[j]=l[j]||{})[p + "_NodeFire" + i] = y
+								if (k.hasKey(!0) || "ready" != p)
+									k = k.styleDefNodeRoot.data.transElms, i = y.domElement.nfUid, (k[i]=k[i]||{})[p + "_NodeFire" + h] = y
 							} else
-								y.cust = j.cust
+								y.cust = i.cust
 						}
 					} else
-						e.saveData = NF.u.object.clone(q[s])
+						e.saveData = NF.u.object.clone(s[m])
 				}
 			}
 			if (!f.BF && NF.u.browser.hasStyle("transition"))
 				for (p in f.data.events)
-				for (i in f.data.events[p].timelines)
-				for (s in e = f.data.events[p].timelines[i], e.elements)
-				for (n in m = e.elements[s], m.styles)
-				if ( l = m.styles[n], l.hasKey(!0)) {
+				for (h in f.data.events[p].timelines)
+				for (m in e = f.data.events[p].timelines[h], e.elements)
+				for (q in l = e.elements[m], l.styles)
+				if ( k = l.styles[q], k.hasKey(!0)) {
 					b = 0;
-					if (!l.styleDefNode.data.cssName)
-						for (k in l.styleDefNodeRoot.data.transElms[m.domElement.nfUid])
+					if (!k.styleDefNode.data.cssName)
+						for (w in k.styleDefNodeRoot.data.transElms[l.domElement.nfUid])
 						b++;
-					2 > b && l.setTransStatus()
+					2 > b && k.setTransStatus()
 				}
 			!f.BF && !a.noPreload && f.preloadImages();
 			NF.u.e.fire(f, "stageCreated", {});
@@ -873,75 +873,75 @@ _NF.prototype.stage = function(k, j) {
 		}
 	};
 	this.preloadImages = function() {
-		i.count = 0;
+		h.count = 0;
 		var a, b;
-		for (b in t)
-		if (!l(t[b])) {
+		for (b in u)
+		if (!t(u[b])) {
 			a = !0;
-			for (var c = t[b].images, d = 0; d < c.length; d++) {
+			for (var d = u[b].images, c = 0; c < d.length; c++) {
 				var e = document.createElement("img");
 				e.trackPreLoads = function() {
 					this.nfImgData.loadCount++;
-					l(this.nfImgData)
+					t(this.nfImgData)
 				};
 				e.onload = e.trackPreLoads;
 				e.onerror = e.trackPreLoads;
 				e.onabort = e.trackPreLoads;
-				e.nfImgData = t[b];
-				e.src = c[d]
+				e.nfImgData = u[b];
+				e.src = d[c]
 			}
 		}
-		a || n.playEvent(f, "preloadall")
+		a || q.playEvent(f, "preloadall")
 	};
 	this.createElement = function(a, b) {
 		if (!f.elements[a]) {
-			var c = f.elements["NodeFire" + b.pUid], d = f.seoElements[a];
-			d || ( d = document.createElement("DIV"), NF.u.d.aC(d, a), NF.u.d.aC(d, "nfA"), d.id = b.id);
-			if (!d.nfContentElm) {
-				var e = h(b.con), i = document.createElement("DIV");
-				NF.u.d.aC(i, "nfB");
+			var d = f.elements["NodeFire" + b.pUid], c = f.seoElements[a];
+			c || ( c = document.createElement("DIV"), NF.u.d.aC(c, a), NF.u.d.aC(c, "nfA"), c.id = b.id);
+			if (!c.nfContentElm) {
+				var e = g(b.con), h = document.createElement("DIV");
+				NF.u.d.aC(h, "nfB");
 				if (e) {
-					var g;
-					g = e ? document.createElement("DIV").innerHTML = e : "";
-					i.innerHTML = g
+					var x;
+					x = e ? document.createElement("DIV").innerHTML = e : "";
+					h.innerHTML = x
 				}
-				NF.u.d.addChild("first-child", i, d);
-				d.nfContent = e;
-				d.nfContentElm = i
+				NF.u.d.addChild("first-child", h, c);
+				c.nfContent = e;
+				c.nfContentElm = h
 			}
-			d.nfLink = {};
+			c.nfLink = {};
 			if (b.link)
-				for (var q in b.link)
-				d.nfLink[q] = h(b.link[q], !0);
-			d.nfOptions = b.opt ? b.opt : {};
+				for (var s in b.link)
+				c.nfLink[s] = g(b.link[s], !0);
+			c.nfOptions = b.opt ? b.opt : {};
 			if (b.cn)
-				for (q in d.nfClass = b.cn, b.cn)
-				NF.u.d.aC(d, q);
+				for (s in c.nfClass = b.cn, b.cn)
+				NF.u.d.aC(c, s);
 			if (b.c) {
 				b.c = b.c.NFisArray ? b.c : [b.c];
-				for ( q = 0; q < b.c.length; q++)
-					NF.u.d.aC(d, "nf" + n.classDefs["_" + b.c[q]])
+				for ( s = 0; s < b.c.length; s++)
+					NF.u.d.aC(c, "nf" + q.classDefs["_" + b.c[s]])
 			}
-			b.nfElmType && (d.nfElmType = b.nfElmType);
-			c != f.root && NF.u.d.aC(c, "nfParent");
-			d.nfUid = a;
-			d.nfUidParent = "NodeFire" + b.pUid;
-			b.uColor && (d.nfUColor = b.uColor);
-			f.elements[a] = d;
+			b.nfElmType && (c.nfElmType = b.nfElmType);
+			d != f.root && NF.u.d.aC(d, "nfParent");
+			c.nfUid = a;
+			c.nfUidParent = "NodeFire" + b.pUid;
+			b.uColor && (c.nfUColor = b.uColor);
+			f.elements[a] = c;
 			a: {
-				g = d.children;
-				for ( e = 0; e < g.length; e++)
-					if (NF.u.d.hC(g[e], "nfB")) {
-						c = g[e].innerHTML.match(/url\(.*\)/ig) || [];
-						for ( i = 0; i < c.length; i++)
-							c[i] = c[i].replace(/url\(|\)/ig, "");
-						e = g[e].getElementsByTagName("IMG");
-						for ( i = 0; i < e.length; i++)
-							c.push(e[i].src);
-						if (0 < c.length) {
-							d = v(d.nfUid);
-							for ( e = 0; e < c.length; e++)
-								d.images.push(c[e])
+				x = c.children;
+				for ( e = 0; e < x.length; e++)
+					if (NF.u.d.hC(x[e], "nfB")) {
+						d = x[e].innerHTML.match(/url\(.*\)/ig) || [];
+						for ( h = 0; h < d.length; h++)
+							d[h] = d[h].replace(/url\(|\)/ig, "");
+						e = x[e].getElementsByTagName("IMG");
+						for ( h = 0; h < e.length; h++)
+							d.push(e[h].src);
+						if (0 < d.length) {
+							c = n(c.nfUid);
+							for ( e = 0; e < d.length; e++)
+								c.images.push(d[e])
 						}
 						break a
 					}
@@ -955,19 +955,19 @@ _NF.prototype.stage = function(k, j) {
 			try {
 				eval(a)
 			} catch(b) {
-				n.debug.logError(b)
+				q.debug.logError(b)
 			}
 	};
-	this.stopActionTimelines = function(a, b, c) {
-		for (var d in f.act[a]) {
-			var m = f.act[a][d], i;
-			for (i in m) {
-				var g = m[i].tElm, q = m[i].eElm;
-				if (b != g || c) {
-					var s;
-					if (!b || (!( s = NF.u.d.isRelation(b, g)) || "ancestor" == s) && !c || c && ("descendant" == s || b == g))
-						e(q, d, "stop", g),
-						delete m[i]
+	this.stopActionTimelines = function(a, b, d) {
+		for (var c in f.act[a]) {
+			var l = f.act[a][c], h;
+			for (h in l) {
+				var g = l[h].tElm, s = l[h].eElm;
+				if (b != g || d) {
+					var m;
+					if (!b || (!( m = NF.u.d.isRelation(b, g)) || "ancestor" == m) && !d || d && ("descendant" == m || b == g))
+						e(s, c, "stop", g),
+						delete l[h]
 				}
 			}
 		}
@@ -984,36 +984,36 @@ _NF.prototype.stage = function(k, j) {
 			NF.u.d.aC(b, "nfActiveLineage"), b = b.parentNode
 	}
 };
-_NF.prototype.stageDataManager = new function(){function k(j,l,v,h,d,e){l?l.isRoot=!1:(l={isRoot:!0},v="");var e=e||0,a;for(a in j){var b=v+a,c;if(c=j[a].data){c.uid=b;c.order=e++;l.isRoot||(c.parentObj=j);if(c.cssName)if(l.isRoot&&(d=j[a]),h=j[a],c.jsName=c.jsName||a,c.transElms={},c.vendorSpecific){var g=c.vendorSpecific={},f=NF.u.css.getBrowserSpecifcStyleName(c.jsName);g.js=f.styleName;g.css=f.cssPrefix+c.cssName}else c.vendorSpecific={};l.isRoot||(c.parentObj=j);c.id=a;c.cssRootNode=h;c.cssTopNode=d;c.lastV={}}"data"!=a&&new k(j[a],NF.util.object.clone(l),b+"_",h,d,e)}}this.getStyleDefs=function(){var j={transition:{data:{cssName:"transition",vendorSpecific:1}},width:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0,range:{min:0}},cssName:"width",cssTrans:1,m:2}},height:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0,range:{min:0}},cssName:"height",cssTrans:1,m:2}},top:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"top",cssTrans:1,m:2}},left:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"left",cssTrans:1,m:2}},right:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"right",cssTrans:1,m:2}},bottom:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"bottom",cssTrans:1,m:2}},backgroundColor:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},cssName:"background-color",header:!0,isColor:!0,cssTrans:1,m:[1,3]},Red:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Green:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Blue:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Alpha:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}}}}},opacity:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}},cssName:"opacity",cssTrans:1,m:3}},backgroundImage:{data:{format:{type:"string",alt:{none:1,inherit:1},left:"url(",right:")",defVal:"http://"},noTween:!0,cssName:"background-image",isImage:!0,m:[0,3]}},backgroundRepeat:{data:{format:{type:"string",defVal:"repeat",select:["repeat","repeat-x","repeat-y","no-repeat","inherit"]},noTween:!0,cssName:"background-repeat",m:3}},backgroundPosition:{data:{format:{},cssName:"background-position",header:!0,m:3},X:{data:{format:{type:"float",alt:{center:1,left:1,right:1},unit:"px",units:["px","%"],dInc:1,sDec:0,right:" "}}},Y:{data:{format:{type:"float",alt:{center:1,top:1,bottom:1},unit:"px",units:["px","%"],dInc:1,sDec:0}}}},background:{data:{format:{type:"gradient"},cssName:"background",header:!0,m:3},angle:{data:{format:{right:", "}}},stopN:{data:{multiQty:!0,format:{},header:!0},color:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},header:!0,isColor:!0},Red:{data:{format:{type:"int",right:","}}},Green:{data:{format:{type:"int",right:","}}},Blue:{data:{format:{type:"int",right:","}}},Alpha:{data:{format:{type:"float",defVal:"1"}}}},location:{data:{format:{type:"int",unit:"%"}}}}},transformOrigin:{data:{format:{},cssName:"transform-origin",vendorSpecific:!0,header:!0,m:4},X:{data:{format:{type:"int",unit:"px",units:["px","%"],right:" "}}},Y:{data:{format:{type:"int",unit:"px",units:["px","%"]}}}},transform:{data:{format:{type:"function"},voidDefs:1,cssName:"transform",cssName:"transform",vendorSpecific:!0,header:!0,isTransform:!0,cssTrans:1,m:4},scaleX:{data:{format:{type:"float",left:"scaleX(",right:")",range:{min:0}}}},scaleY:{data:{format:{type:"float",left:"scaleY(",right:")",range:{min:0}}}},scaleZ:{data:{format:{type:"float",defVal:"1",left:"scaleZ(",right:")",range:{min:0}},is3d:1}},rotate:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"rotate(",right:")"}}},rotateX:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"rotateX(",right:")"},is3d:1}},rotateY:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"rotateY(",right:")"},is3d:1}},rotateZ:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"rotateZ(",right:")"},is3d:1}},skewX:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"skewX(",right:")"}}},skewY:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"skewY(",right:")"}}},translateX:{data:{format:{type:"int",unit:"px",units:["px","%"],left:"translateX(",right:")"}}},translateY:{data:{format:{type:"int",unit:"px",units:["px","%"],left:"translateY(",right:")"}}},translateZ:{data:{format:{type:"int",unit:"px",units:["px","%"],left:"translateZ(",right:")"},is3d:1}}},transformStyle:{data:{format:{type:"string",defVal:"flat",select:["flat","preserve-3d"]},cssName:"transform-style",noTween:!0,vendorSpecific:!0,m:4}},perspective:{data:{format:{type:"int",unit:"px",units:["px","%"]},cssName:"perspective",vendorSpecific:!0,m:4}},borderWidth:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-width",cssTrans:1,m:5},Top:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-top-width",jsName:"borderTopWidth",cssTrans:1}},Right:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-right-width",jsName:"borderRightWidth",cssTrans:1}},Bottom:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-bottom-width",jsName:"borderBottomWidth",cssTrans:1}},Left:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-left-width",jsName:"borderLeftWidth",cssTrans:1}}},borderColor:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},cssName:"border-color",header:!0,isColor:!0,cssTrans:1,m:[1,5]},Red:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Green:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Blue:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Alpha:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}}}}},borderStyle:{data:{format:{type:"string",defVal:"solid",select:"none solid dashed dotted double groove ridge inset outset inherit".split(" ")},noTween:!0,cssName:"border-style",m:5}},borderRadius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-radius",cssTrans:1,m:6},TopLeft:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-top-left-radius",jsName:"borderTopLeftRadius",dualHeader:!0,cssTrans:1},Radius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0},right:" "}}},Axis:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}}}}},TopRight:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-top-right-radius",jsName:"borderTopRightRadius",dualHeader:!0,cssTrans:1},Radius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0},right:" "}}},Axis:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}}}}},BottomRight:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-bottom-right-radius",jsName:"borderBottomRightRadius",dualHeader:!0,cssTrans:1},Radius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0},right:" "}}},Axis:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}}}}},BottomLeft:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-bottom-left-radius",jsName:"borderBottomLeftRadius",dualHeader:!0,cssTrans:1},Radius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0},right:" "}}},Axis:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}}}}}},boxShadow:{data:{format:{type:"shadow",defVal:"5px 5px 0px 0px rgba(0,0,0,1)"},cssName:"box-shadow",header:!0,cssTrans:1,m:7},X:{data:{format:{type:"int",unit:"px",right:" "}}},Y:{data:{format:{type:"int",unit:"px",right:" "}}},Blur:{data:{format:{type:"int",unit:"px",right:" "}}},Spread:{data:{format:{type:"int",unit:"px",right:" "}}},Color:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},header:!0,isColor:!0},Red:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Green:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Blue:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Alpha:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}}}}}},clip:{data:{format:{type:"clip",left:"rect(",right:")"},cssName:"clip",header:!0,cssTrans:1,m:10},Top:{data:{format:{type:"int",unit:"px",right:",",range:{min:0}}}},Right:{data:{format:{type:"int",unit:"px",right:",",range:{min:0}}}},Bottom:{data:{format:{type:"int",unit:"px",right:",",range:{min:0}}}},Left:{data:{format:{type:"int",unit:"px",range:{min:0}}}}},padding:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding",m:8},Top:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding-top",jsName:"paddingTop"}},Right:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding-right",jsName:"paddingRight"}},Bottom:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding-bottom",jsName:"paddingBottom"}},Left:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding-left",jsName:"paddingLeft"}}},margin:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin",m:8},Top:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin-top",jsName:"marginTop"}},Right:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin-right",jsName:"marginRight"}},Bottom:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin-bottom",jsName:"marginBottom"}},Left:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin-left",jsName:"marginLeft"}}},fontSize:{data:{format:{type:"float",alt:{inherit:1},unit:"px",units:["px","%","em"],range:{min:0},dInc:1,sDec:0},cssName:"font-size",cssTrans:1,m:9}},lineHeight:{data:{format:{type:"float",alt:{normal:1,inherit:1},unit:"px",units:["px","%","em"],range:{min:0},dInc:1,sDec:0},cssName:"line-height",m:9}},color:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},cssName:"color",header:!0,isColor:!0,cssTrans:1,m:[1,9]},Red:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Green:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Blue:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Alpha:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}}}}},fontFamily:{data:{format:{type:"string",defVal:"Arial",select:"Georgia, serif;Arial, Helvetica, sans-serif;Arial;Helvetica;sans-serif;Verdana;Courier New;Courier;Times New Roman;Georgia;serif;Tahoma;Impact;Cursive".split(";")},cssName:"font-family",noTween:!0,m:9}},fontStyle:{data:{format:{type:"string",defVal:"normal",select:["normal","italic","oblique","inherit"]},cssName:"font-style",noTween:!0,m:9}},fontWeight:{data:{format:{type:"string",defVal:"normal",select:["normal","bold","bolder","lighter","inherit"]},cssName:"font-weight",noTween:!0,m:9}},textDecoration:{data:{format:{type:"string",defVal:"none",select:"none underline overline line-through blink inherit".split(" ")},cssName:"text-decoration",noTween:!0,m:9}},fontVariant:{data:{format:{type:"string",defVal:"normal",select:["normal","small-caps","inherit"]},cssName:"font-variant",noTween:!0,m:9}},textAlign:{data:{format:{type:"string",defVal:"left",select:["left","center","right","justify","inherit"]},cssName:"text-align",noTween:!0,m:9}},direction:{data:{format:{type:"string",defVal:"ltr",select:["ltr","rtl","inherit"]},cssName:"direction",noTween:!0,m:9}},overflow:{data:{format:{type:"string",defVal:"visible",select:["visible","hidden","scroll","auto","inherit"]},cssName:"overflow",noTween:!0,m:11}},position:{data:{format:{type:"string",defVal:"absolute",select:["absolute","relative","fixed","static","inherit"]},cssName:"position",noTween:!0,m:11}},zIndex:{data:{format:{type:"int",defVal:"0"},cssName:"z-index",m:11}},visibility:{data:{format:{type:"string",defVal:"inherit",select:["visible","hidden","inherit"]},cssName:"visibility",noTween:!0,m:11}},display:{data:{format:{type:"string",defVal:"block",select:["none","block","inherit"]},cssName:"display",noTween:!0,m:11}},cssFloat:{data:{format:{type:"string",defVal:"none",select:["none","left","right","inherit"]},cssName:"float",noTween:!0,m:11}},clear:{data:{format:{type:"string",defVal:"none",select:["none","both","left","right","inherit"]},cssName:"clear",noTween:!0,m:11}},cursor:{data:{format:{type:"string",defVal:"default",select:"auto default pointer progress help text move wait inherit".split(" ")},cssName:"cursor",noTween:!0,m:11}},userSelect:{data:{format:{type:"string",defVal:"default",select:["none","text","all","element"]},cssName:"user-select",vendorSpecific:!0,noTween:!0,m:11}},whiteSpace:{data:{format:{type:"string",defVal:"normal",select:["normal","nowrap","pre","pre-line","interit"]},cssName:"white-space",noTween:!0,m:11}},pointerEvents:{data:{format:{type:"string",defVal:"auto",select:"auto none visiblePainted visibleFill visibleStroke visible painted fill stroke all inherit".split(" ")},cssName:"pointer-events",noTween:!0,m:11}},onKey:{data:{format:{type:"string"},cssName:"eval",noTween:!0,isCode:!0,onKey:!0,SK:1}},onFrames:{data:{format:{type:"string"},cssName:"call",noTween:!0,isCode:!0,onFrames:!0}},innerHTML:{data:{format:{type:"string"},isAfter:1,cssName:"content",noTween:!0,isContent:!0,SK:1}}};k(j);return j};this.getDefaultStyleValue=function(j){var l=j.data.format.defVal,j=j.data.format.type;return null!=l?l:"int"==j||"float"==j?0:""}};
-_NF.prototype.stageData = function(k) {
-	var j = this;
-	j.stage = k;
-	j.events = {};
-	j.addEvent = function(l) {
-		var k = l.nfUid;
-		if (!j.events[k]) {
-			var h;
-			(j.events[k] = new j.event(j, l)).actType = {
-				className : 0 < ( h = k.search("_nfClass_")) ? "." + k.substring(h + 9) : !1,
-				isChildren : k.match("_children"),
-				base : 0 < ( h = k.search("_")) ? k.substring(0, h) : k,
-				uid : k
+_NF.prototype.stageDataManager = new function(){function j(i,t,n,g,d,e){t?t.isRoot=!1:(t={isRoot:!0},n="");var e=e||0,a;for(a in i){var b=n+a,c;if(c=i[a].data){c.uid=b;c.order=e++;t.isRoot||(c.parentObj=i);if(c.cssName)if(t.isRoot&&(d=i[a]),g=i[a],c.jsName=c.jsName||a,c.transElms={},c.vendorSpecific){var k=c.vendorSpecific={},f=NF.u.css.getBrowserSpecifcStyleName(c.jsName);k.js=f.styleName;k.css=f.cssPrefix+c.cssName}else c.vendorSpecific={};t.isRoot||(c.parentObj=i);c.id=a;c.cssRootNode=g;c.cssTopNode=d;c.lastV={}}"data"!=a&&new j(i[a],NF.util.object.clone(t),b+"_",g,d,e)}}this.getStyleDefs=function(){var i={transition:{data:{cssName:"transition",vendorSpecific:1}},width:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0,range:{min:0}},cssName:"width",cssTrans:1,m:2}},height:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0,range:{min:0}},cssName:"height",cssTrans:1,m:2}},top:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"top",cssTrans:1,m:2}},left:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"left",cssTrans:1,m:2}},right:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"right",cssTrans:1,m:2}},bottom:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"bottom",cssTrans:1,m:2}},backgroundColor:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},cssName:"background-color",header:!0,isColor:!0,cssTrans:1,m:[1,3]},Red:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Green:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Blue:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Alpha:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}}}}},opacity:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}},cssName:"opacity",cssTrans:1,m:3}},backgroundImage:{data:{format:{type:"string",alt:{none:1,inherit:1},left:"url(",right:")",defVal:"http://"},noTween:!0,cssName:"background-image",isImage:!0,m:[0,3]}},backgroundSize:{data:{format:{type:"string",defVal:"auto",select:["auto","cover","contain"]},cssName:"border-size",cssName:"background-size",dualHeader:!0,m:3},Width:{data:{format:{type:"float",defVal:"auto",unit:"px",units:["px","%"],alt:{auto:1},right:" ",range:{min:0},dInc:1,sDec:0}}},Height:{data:{format:{type:"float",defVal:"auto",unit:"px",units:["px","%"],alt:{auto:1},range:{min:0},dInc:1,sDec:0}}}},backgroundRepeat:{data:{format:{type:"string",defVal:"repeat",select:["repeat","repeat-x","repeat-y","no-repeat","inherit"]},noTween:!0,cssName:"background-repeat",m:3}},backgroundPosition:{data:{format:{},cssName:"background-position",header:!0,m:3},X:{data:{format:{type:"float",alt:{center:1,left:1,right:1},unit:"px",units:["px","%"],dInc:1,sDec:0,right:" "}}},Y:{data:{format:{type:"float",alt:{center:1,top:1,bottom:1},unit:"px",units:["px","%"],dInc:1,sDec:0}}}},background:{data:{format:{type:"gradient"},cssName:"background",header:!0,m:3},angle:{data:{format:{right:", "}}},stopN:{data:{multiQty:!0,format:{},header:!0},color:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},header:!0,isColor:!0},Red:{data:{format:{type:"int",right:","}}},Green:{data:{format:{type:"int",right:","}}},Blue:{data:{format:{type:"int",right:","}}},Alpha:{data:{format:{type:"float",defVal:"1"}}}},location:{data:{format:{type:"int",unit:"%"}}}}},transformOrigin:{data:{format:{},cssName:"transform-origin",vendorSpecific:!0,header:!0,m:4},X:{data:{format:{type:"int",unit:"px",units:["px","%"],right:" "}}},Y:{data:{format:{type:"int",unit:"px",units:["px","%"]}}}},transform:{data:{format:{type:"function"},voidDefs:1,cssName:"transform",cssName:"transform",vendorSpecific:!0,header:!0,isTransform:!0,cssTrans:1,m:4},scaleX:{data:{format:{type:"float",left:"scaleX(",right:")",range:{min:0}}}},scaleY:{data:{format:{type:"float",left:"scaleY(",right:")",range:{min:0}}}},scaleZ:{data:{format:{type:"float",defVal:"1",left:"scaleZ(",right:")",range:{min:0}},is3d:1}},rotate:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"rotate(",right:")"}}},rotateX:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"rotateX(",right:")"},is3d:1}},rotateY:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"rotateY(",right:")"},is3d:1}},rotateZ:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"rotateZ(",right:")"},is3d:1}},skewX:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"skewX(",right:")"}}},skewY:{data:{format:{type:"float",unit:"deg",dInc:1,sDec:0,left:"skewY(",right:")"}}},translateX:{data:{format:{type:"int",unit:"px",units:["px","%"],left:"translateX(",right:")"}}},translateY:{data:{format:{type:"int",unit:"px",units:["px","%"],left:"translateY(",right:")"}}},translateZ:{data:{format:{type:"int",unit:"px",units:["px","%"],left:"translateZ(",right:")"},is3d:1}}},transformStyle:{data:{format:{type:"string",defVal:"flat",select:["flat","preserve-3d"]},cssName:"transform-style",noTween:!0,vendorSpecific:!0,m:4}},perspective:{data:{format:{type:"int",unit:"px",units:["px","%"]},cssName:"perspective",vendorSpecific:!0,m:4}},borderWidth:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-width",cssTrans:1,m:5},Top:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-top-width",jsName:"borderTopWidth",cssTrans:1}},Right:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-right-width",jsName:"borderRightWidth",cssTrans:1}},Bottom:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-bottom-width",jsName:"borderBottomWidth",cssTrans:1}},Left:{data:{format:{type:"int",unit:"px",range:{min:0}},cssName:"border-left-width",jsName:"borderLeftWidth",cssTrans:1}}},borderColor:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},cssName:"border-color",header:!0,isColor:!0,cssTrans:1,m:[1,5]},Red:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Green:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Blue:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Alpha:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}}}}},borderStyle:{data:{format:{type:"string",defVal:"solid",select:"none solid dashed dotted double groove ridge inset outset inherit".split(" ")},noTween:!0,cssName:"border-style",m:5}},borderRadius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-radius",cssTrans:1,m:6},TopLeft:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-top-left-radius",jsName:"borderTopLeftRadius",dualHeader:!0,cssTrans:1},Radius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0},right:" "}}},Axis:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}}}}},TopRight:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-top-right-radius",jsName:"borderTopRightRadius",dualHeader:!0,cssTrans:1},Radius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0},right:" "}}},Axis:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}}}}},BottomRight:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-bottom-right-radius",jsName:"borderBottomRightRadius",dualHeader:!0,cssTrans:1},Radius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0},right:" "}}},Axis:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}}}}},BottomLeft:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"border-bottom-left-radius",jsName:"borderBottomLeftRadius",dualHeader:!0,cssTrans:1},Radius:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0},right:" "}}},Axis:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}}}}}},boxShadow:{data:{format:{type:"shadow",defVal:"5px 5px 0px 0px rgba(0,0,0,1)"},cssName:"box-shadow",header:!0,cssTrans:1,m:7},X:{data:{format:{type:"int",unit:"px",right:" "}}},Y:{data:{format:{type:"int",unit:"px",right:" "}}},Blur:{data:{format:{type:"int",unit:"px",right:" "}}},Spread:{data:{format:{type:"int",unit:"px",right:" "}}},Color:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},header:!0,isColor:!0},Red:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Green:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Blue:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Alpha:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}}}}}},clip:{data:{format:{type:"clip",left:"rect(",right:")"},cssName:"clip",header:!0,cssTrans:1,m:10},Top:{data:{format:{type:"int",unit:"px",right:",",range:{min:0}}}},Right:{data:{format:{type:"int",unit:"px",right:",",range:{min:0}}}},Bottom:{data:{format:{type:"int",unit:"px",right:",",range:{min:0}}}},Left:{data:{format:{type:"int",unit:"px",range:{min:0}}}}},padding:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding",m:8},Top:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding-top",jsName:"paddingTop"}},Right:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding-right",jsName:"paddingRight"}},Bottom:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding-bottom",jsName:"paddingBottom"}},Left:{data:{format:{type:"int",unit:"px",units:["px","%"],range:{min:0}},cssName:"padding-left",jsName:"paddingLeft"}}},margin:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin",m:8},Top:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin-top",jsName:"marginTop"}},Right:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin-right",jsName:"marginRight"}},Bottom:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin-bottom",jsName:"marginBottom"}},Left:{data:{format:{type:"float",alt:{auto:1,inherit:1},unit:"px",units:["px","%"],dInc:1,sDec:0},cssName:"margin-left",jsName:"marginLeft"}}},fontSize:{data:{format:{type:"float",alt:{inherit:1},unit:"px",units:["px","%","em"],range:{min:0},dInc:1,sDec:0},cssName:"font-size",cssTrans:1,m:9}},lineHeight:{data:{format:{type:"float",alt:{normal:1,inherit:1},unit:"px",units:["px","%","em"],range:{min:0},dInc:1,sDec:0},cssName:"line-height",m:9}},color:{data:{format:{type:"color",defVal:"rgba(0,0,0,1)",left:"rgba(",right:")"},cssName:"color",header:!0,isColor:!0,cssTrans:1,m:[1,9]},Red:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Green:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Blue:{data:{format:{type:"int",right:",",range:{min:0,max:255}}}},Alpha:{data:{format:{type:"float",defVal:"1",range:{min:0,max:1}}}}},fontFamily:{data:{format:{type:"string",defVal:"Arial",select:"Georgia, serif;Arial, Helvetica, sans-serif;Arial;Helvetica;sans-serif;Verdana;Courier New;Courier;Times New Roman;Georgia;serif;Tahoma;Impact;Cursive".split(";")},cssName:"font-family",noTween:!0,m:9}},fontStyle:{data:{format:{type:"string",defVal:"normal",select:["normal","italic","oblique","inherit"]},cssName:"font-style",noTween:!0,m:9}},fontWeight:{data:{format:{type:"string",defVal:"normal",select:["normal","bold","bolder","lighter","inherit"]},cssName:"font-weight",noTween:!0,m:9}},textDecoration:{data:{format:{type:"string",defVal:"none",select:"none underline overline line-through blink inherit".split(" ")},cssName:"text-decoration",noTween:!0,m:9}},fontVariant:{data:{format:{type:"string",defVal:"normal",select:["normal","small-caps","inherit"]},cssName:"font-variant",noTween:!0,m:9}},textAlign:{data:{format:{type:"string",defVal:"left",select:["left","center","right","justify","inherit"]},cssName:"text-align",noTween:!0,m:9}},direction:{data:{format:{type:"string",defVal:"ltr",select:["ltr","rtl","inherit"]},cssName:"direction",noTween:!0,m:9}},overflow:{data:{format:{type:"string",defVal:"visible",select:["visible","hidden","scroll","auto","inherit"]},cssName:"overflow",noTween:!0,m:11}},position:{data:{format:{type:"string",defVal:"absolute",select:["absolute","relative","fixed","static","inherit"]},cssName:"position",noTween:!0,m:11}},zIndex:{data:{format:{type:"int",defVal:"0"},cssName:"z-index",m:11}},visibility:{data:{format:{type:"string",defVal:"inherit",select:["visible","hidden","inherit"]},cssName:"visibility",noTween:!0,m:11}},display:{data:{format:{type:"string",defVal:"block",select:["none","block","inherit"]},cssName:"display",noTween:!0,m:11}},cssFloat:{data:{format:{type:"string",defVal:"none",select:["none","left","right","inherit"]},cssName:"float",noTween:!0,m:11}},clear:{data:{format:{type:"string",defVal:"none",select:["none","both","left","right","inherit"]},cssName:"clear",noTween:!0,m:11}},cursor:{data:{format:{type:"string",defVal:"default",select:"auto default pointer progress help text move wait inherit".split(" ")},cssName:"cursor",noTween:!0,m:11}},userSelect:{data:{format:{type:"string",defVal:"default",select:["none","text","all","element"]},cssName:"user-select",vendorSpecific:!0,noTween:!0,m:11}},whiteSpace:{data:{format:{type:"string",defVal:"normal",select:["normal","nowrap","pre","pre-line","interit"]},cssName:"white-space",noTween:!0,m:11}},pointerEvents:{data:{format:{type:"string",defVal:"auto",select:"auto none visiblePainted visibleFill visibleStroke visible painted fill stroke all inherit".split(" ")},cssName:"pointer-events",noTween:!0,m:11}},onKey:{data:{format:{type:"string"},cssName:"eval",noTween:!0,isCode:!0,onKey:!0,SK:1}},onFrames:{data:{format:{type:"string"},cssName:"call",noTween:!0,isCode:!0,onFrames:!0}},innerHTML:{data:{format:{type:"string"},isAfter:1,cssName:"content",noTween:!0,isContent:!0,SK:1}}};j(i);return i};this.getDefaultStyleValue=function(i){var j=i.data.format.defVal,i=i.data.format.type;return null!=j?j:"int"==i||"float"==i?0:""}};
+_NF.prototype.stageData = function(j) {
+	var i = this;
+	i.stage = j;
+	i.events = {};
+	i.addEvent = function(j) {
+		var n = j.nfUid;
+		if (!i.events[n]) {
+			var g;
+			(i.events[n] = new i.event(i, j)).actType = {
+				className : 0 < ( g = n.search("_nfClass_")) ? "." + n.substring(g + 9) : !1,
+				isChildren : n.match("_children"),
+				base : 0 < ( g = n.search("_")) ? n.substring(0, g) : n,
+				uid : n
 			}
 		}
-		return j.events[k]
+		return i.events[n]
 	};
-	j.event = function(j, k) {
-		var h = this;
-		h.params = k || {};
-		h.parentObj = j;
-		h.timelines = {};
-		h.addTimeline = function(d) {
-			h.timelines[d.nfUid] || (h.timelines[d.nfUid] = new h.timeline(h, d), d.nfTimelines || (d.nfTimelines = {}), d.nfTimelines[h.params.nfUid] = h.timelines[d.nfUid]);
-			return h.timelines[d.nfUid]
+	i.event = function(i, j) {
+		var g = this;
+		g.params = j || {};
+		g.parentObj = i;
+		g.timelines = {};
+		g.addTimeline = function(d) {
+			g.timelines[d.nfUid] || (g.timelines[d.nfUid] = new g.timeline(g, d), d.nfTimelines || (d.nfTimelines = {}), d.nfTimelines[g.params.nfUid] = g.timelines[d.nfUid]);
+			return g.timelines[d.nfUid]
 		};
-		h.timeline = function(d, e) {
+		g.timeline = function(d, e) {
 			function a() {
-				f && (f(h), h = null);
+				f && (f(i), i = null);
 				clearTimeout(c);
 				c = null;
 				b.startTime = null
@@ -1031,7 +1031,7 @@ _NF.prototype.stageData = function(k) {
 			};
 			b.options = {};
 			b.startTime
-			var c, g = window.requestAnimationFrame, f = window.cancelAnimationFrame, h;
+			var c, g = window.requestAnimationFrame, f = window.cancelAnimationFrame, i;
 			b.play = function(d) {
 				if (!d) {
 					if (b.isPlaying())
@@ -1040,18 +1040,18 @@ _NF.prototype.stageData = function(k) {
 					b.framePos.max = 0;
 					for (var e in b.elements)
 					for (var f in b.elements[e].styles) {
-						var x, u;
-						for (u in x = b.elements[e].styles[f].keys)x[u].frame > b.framePos.max && (b.framePos.max = x[u].frame)
+						var z, v;
+						for (v in z = b.elements[e].styles[f].keys)z[v].frame > b.framePos.max && (b.framePos.max = z[v].frame)
 					}
 					b.framePos.cur >= b.framePos.max && (b.framePos.cur = 0);
 					NF.u.e.fire(b, "playStart", {})
 				}
-				var j;
-				b.startTime || (b.setStartTime(), j = {
+				var A;
+				b.startTime || (b.setStartTime(), A = {
 					init : 1,
 					isPlay : !d
 				});
-				d = b.setTime((Date.now() - b.startTime) / 1E3, j, b.framePos.max);
+				d = b.setTime((Date.now() - b.startTime) / 1E3, A, b.framePos.max);
 				NF.u.e.fire(b, "playFrame", {
 					timeline : b,
 					seconds : b.framePos.seconds
@@ -1064,7 +1064,7 @@ _NF.prototype.stageData = function(k) {
 						NF.u.e.fire(b, "playEnd", {});
 						return
 					}
-				g ? h = g(b.play, b.parentObj.parentObj.stage.root) : c = window.setTimeout(function() {
+				g ? i = g(b.play, b.parentObj.parentObj.stage.root) : c = window.setTimeout(function() {
 					b.play(!0)
 				}, 1E3 / b.framePos.fps)
 			};
@@ -1090,27 +1090,27 @@ _NF.prototype.stageData = function(k) {
 				b.setFramePos(0)
 			};
 			b.isPlaying = function() {
-				if (c || h)
+				if (c || i)
 					return !0
 			};
 			b.addElement = function(a) {
 				if (!b.elements[a.nfUid]) {
 					b.elements[a.nfUid] = new b.element(b, a);
-					var c;
+					var d;
 					try {
-						c = a instanceof HTMLElement
-					} catch(d) {
-						c = 1 == a.nodeType
+						d = a instanceof HTMLElement
+					} catch(c) {
+						d = 1 == a.nodeType
 					}
-					c ? b.elements[a.nfUid].isDomElement = !0 : b.elements[a.nfUid].setRule(a.rule)
+					d ? b.elements[a.nfUid].isDomElement = !0 : b.elements[a.nfUid].setRule(a.rule)
 				}
 				return b.elements[a.nfUid]
 			};
-			b.setTime = function(a, c, d) {
+			b.setTime = function(a, d, c) {
 				b.framePos.seconds = a;
 				a = b.getFrame(a);
-				null != d && a >= d && (b.framePos.seconds = b.getTime(d), a = d);
-				b.setFramePos(a, c);
+				null != c && a >= c && (b.framePos.seconds = b.getTime(c), a = c);
+				b.setFramePos(a, d);
 				return a
 			};
 			b.getFrame = function(a) {
@@ -1119,174 +1119,174 @@ _NF.prototype.stageData = function(k) {
 			b.getTime = function(a) {
 				return a / b.framePos.fps
 			};
-			b.setFramePos = function(a, c) {
-				if (a != b.framePos.cur || c) {
+			b.setFramePos = function(a, d) {
+				if (a != b.framePos.cur || d) {
 					b.framePos.cur = a;
-					var d = b.moveElements(c);
+					var c = b.moveElements(d);
 					NF.u.e.fire(b, "frameChange", {
 						timeline : b,
 						framePosition : a,
-						changed : d
+						changed : c
 					})
 				}
 			};
 			b.moveElements = function(a) {
-				var c, d;
-				for (d in b.elements) {
-					var e = b.moveElement(b.elements[d], null, a);
-					e && ( c = c || {}, c[d] = e)
+				var d, c;
+				for (c in b.elements) {
+					var e = b.moveElement(b.elements[c], null, a);
+					e && ( d = d || {}, d[c] = e)
 				}
-				return c
+				return d
 			};
-			b.moveElement = function(a, c, d) {
-				if ( c = b.getElementStyleChanges(a, c, d)) {
+			b.moveElement = function(a, d, c) {
+				if ( d = b.getElementStyleChanges(a, d, c)) {
 					a.applyTransition();
-					for (var e in c.topChanged)
-					a.apply(c.topChanged[e].styleDefNode);
+					for (var e in d.topChanged)
+					a.apply(d.topChanged[e].styleDefNode);
 					NF.u.e.fire(b, "elementChanged", {
 						elm : a
 					})
 				}
-				return c
+				return d
 			};
-			b.getElementStyleChanges = function(a, b, c) {
-				var d, e = {}, a = a.styles, f;
+			b.getElementStyleChanges = function(a, b, d) {
+				var c, e = {}, a = a.styles, f;
 				for (f in a)
 				if (!(b && a[f].styleDefNodeTop != b.data.cssTopNode)) {
-					var g = a[f].applyPos(c);
+					var g = a[f].applyPos(d);
 					if (g) {
-						d = d || {};
-						var m = g.styleDefNodeTop.data.uid;
-						d[m] = a[m];
+						c = c || {};
+						var l = g.styleDefNodeTop.data.uid;
+						c[l] = a[l];
 						e[f] = g;
-						e[m] = a[m]
+						e[l] = a[l]
 					}
 				}
-				if (d)
+				if (c)
 					return {
-						topChanged : d,
+						topChanged : c,
 						allChanged : e
 					}
 			};
 			b.element = function(a, b) {
-				function c(a, b) {
-					d.styles[a.data.uid] || (d.styles[a.data.uid] = new d.style(d, a));
-					for (var e in a)"data" != e && new c(a[e], b, !0)
+				function d(a, b) {
+					c.styles[a.data.uid] || (c.styles[a.data.uid] = new c.style(c, a));
+					for (var e in a)"data" != e && new d(a[e], b, !0)
 				}
 
-				var d = this;
+				var c = this;
 				var _this = this;
-				d.parentObj = a;
-				d.timeline = a;
-				d.event = a.parentObj;
-				d.stage = d.event.parentObj.stage;
-				d.domElement = b;
-				d.isDomElement
-				d.styles = {};
-				d.rule
-				d.ruleR
+				c.parentObj = a;
+				c.timeline = a;
+				c.event = a.parentObj;
+				c.stage = c.event.parentObj.stage;
+				c.domElement = b;
+				c.isDomElement
+				c.styles = {};
+				c.rule
+				c.ruleR
 				b.nfTrans || (b.nfTrans = {}, b.nfTransV = "");
-				d.addStyle = function(a) {
+				c.addStyle = function(a) {
 					var b = a.data.uid;
-					d.styles[b] || c(a.data.cssTopNode, a);
-					return d.styles[b]
+					c.styles[b] || d(a.data.cssTopNode, a);
+					return c.styles[b]
 				};
-				d.setRule = function(a) {
-					d.rule = a;
-					d.domElement.nfUid.match("CR_") && ( a = "[stageName] " + a);
-					a = a.replace("[stageID]", "." + d.stage.root.nfUid);
-					a = a.replace("[stageName]", "#" + d.stage.root.id);
-					d.ruleR = a
+				c.setRule = function(a) {
+					c.rule = a;
+					c.domElement.nfUid.match("CR_") && ( a = "[stageName] " + a);
+					a = a.replace("[stageID]", "." + c.stage.root.nfUid);
+					a = a.replace("[stageName]", "#" + c.stage.root.id);
+					c.ruleR = a
 				};
-				d.executeCode = function(a) {
-					if (!d.stage.BF)
+				c.executeCode = function(a) {
+					if (!c.stage.BF)
 						try {
 							eval(a)
 						} catch(b) {
 							NF.stageManager.debug.logError(b)
 						}
 				};
-				d.applyTransition = function() {
-					var a = d.domElement, b = a.nfTrans, c = "", e;
-					for (e in b)var f = d.timeline.getTime(b[e].endFrame + 1) - (Date.now() - d.timeline.startTime) / 1E3, c = c + (( c ? "," : "") + b[e].cssName + " " + f + "s " + b[e].ease);
-					c != a.nfTransV && ( b = d.stage.styleDefs.transition.data, e = b.vendorSpecific.js || b.jsName, d.rule ? d.stage.applyCSS(d.rule, b.vendorSpecific.css || b.cssName, e, c, null, d.domElement.nfUid) : a.style[e] = c, a.nfTransV = c)
+				c.applyTransition = function() {
+					var a = c.domElement, b = a.nfTrans, d = "", e;
+					for (e in b)var f = c.timeline.getTime(b[e].endFrame + 1) - (Date.now() - c.timeline.startTime) / 1E3, d = d + (( d ? "," : "") + b[e].cssName + " " + f + "s " + b[e].ease);
+					d != a.nfTransV && ( b = c.stage.styleDefs.transition.data, e = b.vendorSpecific.js || b.jsName, c.rule ? c.stage.applyCSS(c.rule, b.vendorSpecific.css || b.cssName, e, d, null, c.domElement.nfUid) : a.style[e] = d, a.nfTransV = d)
 				};
-				d.apply = function(a, b, c) {
-					var e = d.buildValue(a);
+				c.apply = function(a, b, d) {
+					var e = c.buildValue(a);
 					if (null != e) {
-						var f, g = d.styles[a.data.uid];
-						g.removeValue && (b && c && ( f = !0), g.removeValue = !1, e = "");
+						var f, g = c.styles[a.data.uid];
+						g.removeValue && (b && d && ( f = !0), g.removeValue = !1, e = "");
 						a.data.header && (g.value = !e ? null : e);
 						if (a.data.isCode)
-							a.data.onFrames && d.executeCode(e);
+							a.data.onFrames && c.executeCode(e);
 						else if (!f)
 							try {
-								var q = g.styleDefNodeRoot.data, s = q.vendorSpecific.js || q.jsName;
-								if (d.isDomElement)
-									d.domElement.style[s] = e;
+								var s = g.styleDefNodeRoot.data, m = s.vendorSpecific.js || s.jsName;
+								if (c.isDomElement)
+									c.domElement.style[m] = e;
 								else {
-									var h = d.ruleR, b = e, i = d.domElement.nfUid;
-									if (q.isAfter)
-										var j = e.match(/url\(|counter/i) ? "" : '"', h = h + (h.match(/\:before|\:after/i) ? "" : ">.nfB:after"), b = j + e.replace(/\"/g, '"') + j, i = i + "_after", s = "content";
-									d.stage.applyCSS(h, q.vendorSpecific.css || q.cssName, s, b, null, i)
+									var h = c.ruleR, b = e, i = c.domElement.nfUid;
+									if (s.isAfter)
+										var j = e.match(/url\(|counter/i) ? "" : '"', h = h + (h.match(/\:before|\:after/i) ? "" : ">.nfB:after"), b = j + e.replace(/\"/g, '"') + j, i = i + "_after", m = "content";
+									c.stage.applyCSS(h, s.vendorSpecific.css || s.cssName, m, b, null, i)
 								}
 							} catch(k) {
 							}
-						f || NF.u.e.fire(d, "applyStyle", {
-							domElement : d.domElement,
+						f || NF.u.e.fire(c, "applyStyle", {
+							domElement : c.domElement,
 							style : g,
-							element : d.domElement
+							element : c.domElement
 						})
 					}
-					for (var l in a)"data" != l && a[l].data.cssName && new d.apply(a[l], !0, e)
+					for (var n in a)"data" != n && a[n].data.cssName && new c.apply(a[n], !0, e)
 				};
-				this.buildValue = function(a, b, c) {
+				this.buildValue = function(a, b, d) {
 					b || ( b = {});
-					var e = a.data.format.left || "", f = d.styles[a.data.uid], g = !1, h = NF.u.browser.ie8Down;
+					var e = a.data.format.left || "", f = c.styles[a.data.uid], g = !1, h = NF.u.browser.ie8Down;
 					if (NF.u.browser.no3d && a.data.is3d || h && "Alpha" == a.data.id)
 						e = "", g = 1;
 					else {
 						if (a.data.isColor && "transparent" == f.value)
 							return "transparent";
 						h && a.data.isColor && ( e = "rgb(", a.Blue.data.format.right = "");
-						var i;
+						var m;
 						a: {
 							if (a.data.dualHeader)
-								for (i in a)
-								if ("data" != i && ( h = d.styles[a[i].data.uid], null != h.value && !h.removeValue)) {
-									i = !0;
+								for (m in a)
+								if ("data" != m && ( h = c.styles[a[m].data.uid], null != h.value && !h.removeValue)) {
+									m = !0;
 									break a
 								}
-							i =
+							m =
 							void 0
 						}
-						if (!a.data.header && !i) {
-							var j;
-							if (null != f.value && !f.removeValue)
-								e += f.value, b.hit = !0;
+						if (!a.data.header && !m) {
+							var i, h = f.value;
+							if (null != h && !f.removeValue)
+								e += h, b.hit = !0;
 							else {
 								f.removeValue && (b.removeHit = !0);
-								c && (f.removeValue = !1);
-								var k;
-								if (null != ( k = a.data.lastV[d.domElement.nfUid]) && null != k.v)
-									j = k.u, b.hit = !0, f.removeValue = !1, e += k.v;
+								d && (f.removeValue = !1);
+								var y;
+								if (null != ( y = a.data.lastV[c.domElement.nfUid]) && null != y.v)
+									i = y.u, b.hit = !0, f.removeValue = !1, e += y.v;
 								else {
-									var l;
-									if (( l = a.data.parentObj) && l.data.voidDefs && null == a.data.format.defVal)
+									var j;
+									if (( j = a.data.parentObj) && j.data.voidDefs && null == a.data.format.defVal)
 										return "";
-									e += NF.stageDataManager.getDefaultStyleValue(a)
+									e += h = NF.stageDataManager.getDefaultStyleValue(a)
 								}
 							}
-							if (!a.data.format.alt || !a.data.format.alt[f.value])
-								e += j || f.unit || a.data.format.unit || ""
+							if (!a.data.format.alt || !a.data.format.alt[h])
+								e += i || f.unit || a.data.format.unit || ""
 						}
-						if (!a.data.dualHeader || i)
-							for (var n in a)"data" != n && !a[n].data.cssName && (e += d.buildValue(a[n], b, !0))
+						if (!a.data.dualHeader || m)
+							for (var k in a)"data" != k && !a[k].data.cssName && (e += c.buildValue(a[k], b, !0))
 					}
-					if (c || b.hit || b.removeHit)
-						return !c && b.removeHit && !b.hit ? "" : e + ( g ? "" : a.data.format.right || "")
+					if (d || b.hit || b.removeHit)
+						return !d && b.removeHit && !b.hit ? "" : e + ( g ? "" : a.data.format.right || "")
 				};
-				d.style = function(a, b) {
+				c.style = function(a, b) {
 					function d(a, b, e, f, g) {
 						var h = {};
 						0 == e && f && ( h = f);
@@ -1396,17 +1396,17 @@ _NF.prototype.stageData = function(k) {
 								if (g.key.isDef || !h.key)
 									h = g;
 								i = g.key.vFunc ? d(g.key.vFunc, g.key, f, a, c.lKey != g.key) : g.key.value;
-								var j = h.key.vFunc ? d(h.key.vFunc, h.key, null, a) : h.key.value, k = c.styleDefNodeRoot.data, l = c.parentObj.domElement;
+								var j = h.key.vFunc ? d(h.key.vFunc, h.key, null, a) : h.key.value, k = c.styleDefNodeRoot.data, n = c.parentObj.domElement;
 								if (g.key.isTrans && h.key.isTrans && g.key != h.key && (!a || !a.reset)) {
 									i = j;
-									var n = g.key.params.ease, n = "cubic-bezier(" + (( n ? NF.u.a.ease["css_"+n.direction][n.type] : "0.250, 0.250, 0.750, 0.750") || "0.250, 0.250, 0.750, 0.750") + ")";
-									l.nfTrans[k.uid] || (l.nfTrans[k.uid] = {
+									var q = g.key.params.ease, q = "cubic-bezier(" + (( q ? NF.u.a.ease["css_"+q.direction][q.type] : "0.250, 0.250, 0.750, 0.750") || "0.250, 0.250, 0.750, 0.750") + ")";
+									n.nfTrans[k.uid] || (n.nfTrans[k.uid] = {
 										endFrame : h.key.frame,
-										ease : n,
+										ease : q,
 										cssName : k.vendorSpecific.css || k.cssName
 									})
 								} else
-									delete l.nfTrans[k.uid];
+									delete n.nfTrans[k.uid];
 								f = b.noTween ? i : NF.u.a.tween({
 									startValue : i,
 									endValue : j,
@@ -1426,7 +1426,7 @@ _NF.prototype.stageData = function(k) {
 										j.innerHTML = i || "";
 								c.lKey = h.key == g.key ? null : g.key;
 								if (c.value != f || c.unit != g.key.unit || g.key.vFunc || c.vFuncStr && g.key.vFunc != c.vFuncStr || a || c.parentObj.stage.BF && c.hasKey(!0))
-									return c.vFuncStr = g.key.vFunc ? g.key.value : null, c.unit = g.key.unit, c.removeValue = null == f ? !0 : !1, b.lastV[e] = {
+									return c.vFuncStr = g.key.vFunc ? g.key.value : null, c.unit = g.key.unit, c.removeValue = null == f && null != c.value && !b.header ? !0 : !1, b.lastV[e] = {
 										v : f,
 										u : c.unit,
 										c : c.vFuncStr
@@ -1465,14 +1465,13 @@ NodeFire_1699574298 = {
 	data : {
 		data : {
 			elmId : "Linhas",
-			uColor : "rgba(77,104,176,x)",
 			elmOrder : {
 				_0764239314 : {
 					id : "Botao_Voltar",
 					pUid : "_1699574298",
 					c : 1,
 					link : {
-						link : "administrativos.html"
+						link : "hotelaria.html"
 					},
 					cn : {
 						nf_button : 1,
@@ -1707,7 +1706,7 @@ NodeFire_1699574298 = {
 					id : "Video",
 					pUid : "_1699574298",
 					c : 1,
-					con : "<iframe width=\"820\" height=\"400\" src=\"http://www.youtube.com/embed/76Ia61BSW1g?autoplay=1\" frameborder=\"0\" allowfullscreen=\"\"></iframe>"
+					con : "<center><h1>Vídeo do curso de Hotelaria?</h1></center>"
 				},
 				_1780652235 : {
 					id : "Botao_Hotelaria",
@@ -1754,11 +1753,6 @@ NodeFire_1699574298 = {
 							v : 0
 						}
 					},
-					left : {
-						def : {
-							v : -1
-						}
-					},
 					width : {
 						_0 : {
 							v : 1024
@@ -1793,26 +1787,41 @@ NodeFire_1699574298 = {
 					},
 					backgroundColor : {
 						def : {
-							v : "rgba(255,0,0,1)"
+							v : "rgba(255,255,255,1)"
+						},
+						_90 : {
+							v : "rgba(255,255,255,1)"
 						}
 					},
 					backgroundColor_Red : {
 						def : {
 							v : 255
+						},
+						_90 : {
+							v : 255
 						}
 					},
 					backgroundColor_Green : {
 						def : {
-							v : 0
+							v : 255
+						},
+						_90 : {
+							v : 255
 						}
 					},
 					backgroundColor_Blue : {
 						def : {
-							v : 0
+							v : 255
+						},
+						_90 : {
+							v : 255
 						}
 					},
 					backgroundColor_Alpha : {
 						def : {
+							v : 1
+						},
+						_90 : {
 							v : 1
 						}
 					},
@@ -4342,7 +4351,7 @@ NodeFire_1699574298 = {
 				_1780040973 : {
 					width : {
 						def : {
-							v : 820
+							v : 825
 						}
 					},
 					height : {
@@ -4357,12 +4366,32 @@ NodeFire_1699574298 = {
 					},
 					left : {
 						def : {
-							v : 190
+							v : 192
 						}
 					},
 					backgroundColor : {
 						def : {
-							v : "transparent"
+							v : "rgba(151,151,151,1)"
+						}
+					},
+					backgroundColor_Red : {
+						def : {
+							v : 151
+						}
+					},
+					backgroundColor_Green : {
+						def : {
+							v : 151
+						}
+					},
+					backgroundColor_Blue : {
+						def : {
+							v : 151
+						}
+					},
+					backgroundColor_Alpha : {
+						def : {
+							v : 1
 						}
 					},
 					opacity : {
@@ -6613,5 +6642,4 @@ NodeFire_1699574298 = {
 			}
 		}
 	}
-};
-
+}; 
