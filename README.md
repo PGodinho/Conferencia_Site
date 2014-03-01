@@ -1,4 +1,4 @@
-# [Conferência de Empregabilidade - 2013](http://conferenciavidaativa.letpi.com/)
+# [Conferência de Empregabilidade - 2013](http://conferencia.frogcp.com/)
 
 ##Ciências informáticas - Formação de Ativos
 Trabalho final do curso de formação profissional de [Programador JAVA](http://www.citeforma.pt/docs/cursosDetalhePrint.asp?idCurso=6116)
